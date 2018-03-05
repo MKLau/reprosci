@@ -17,6 +17,7 @@ Total Class Time: 4.5 hours
 
 - Activity: import a dataset
 - Activity: manage the data for an analysis
+- Activity: testing data
 
 ## Notebooks are dead, long live notebooks! (45 min)
 
