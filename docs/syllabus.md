@@ -6,7 +6,7 @@ output:
     latex_engine: pdflatex
 geometry: margin=1in
 
-title: "Reproducible Science with R"
+title: "Reproducible Research with R"
 author: Matthew K. Lau
 date: "June 7, 14 and 21 (Total = 4.5 hrs)"
 
@@ -23,11 +23,11 @@ header-includes:
 ## Why make your work reproducible and why R? 
 
 Science is driven by the exchange of information and knowledge. A
-recent study (Stodden *et al.* 2018) demonstrated that only 26% of
-studies published in the journal *Science* could be reproduced. This
-was even more striking given that the study was conducted after
-*Science* had instituted its open data policy. Luckily, advances in
-open-source computer languages, such as **R**, provide a way to
+recent study demonstrated that only 26% of studies published in the
+journal *Science* could be reproduced (see Stodden *et al.*
+2018). This was even more striking given that the study was conducted
+after *Science* had instituted its open data policy. Luckily, advances
+in open-source computer languages, such as **R**, provide a way to
 produce computations that can more easily document scientific research
 in a transparent, easily shared way.
 
@@ -74,7 +74,6 @@ The course will be a mix of demos, discussions and activities:
 - ACTIVITY: Use packrat
 - Q/A and tips
 
-
 ## Before Class (15-20 min)
 
 Download and install:
@@ -98,18 +97,21 @@ of Conduct outline by the folks at ROpenSci
 (https://ropensci.org/coc).
 
 *Be considerate and respectiful of each other in speech and actions*
+
 *Contribute a safe and effective learning experience for everyone*
+
 *We all get out of this class what we put into it*
 
-See more at https://adainitiative.org
+## Advanced Topic Discussions via Slack (Depending on Interests)
 
-## Possible Advanced Topic Discussions via Slack 
+*RMarkdown*, *dplyr*, *ggplot*, *github*, *Shiny Apps*, *R packages*, *Code performance with profVis*, *Data Provenance in R*
 
-- Creating *Shiny Apps*
-- Writing **R** *packages*
-- Using *github*
-- Scientific notebooks with RMarkdown
-- Identifying code inefficiency with profVis 
-- Data provenance in R
+## References
+
+Stodden, V, Seiler, J and Z, Ma (2018) An empirical analysis of
+journal policy effectiveness for computational reproducibility. PNAS
+115: 2584--2589. http://www.pnas.org/content/115/11/2584
 
 <!-- rmarkdown::render("syllabus.md", output_format = "pdf_document", output_file = "reprosci_syllabus.pdf") -->
+
+
