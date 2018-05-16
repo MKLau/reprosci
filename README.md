@@ -16,9 +16,8 @@ Total Class Time: 4.5 hours
 
 - **FAIR** = Findable Accessible Interoperable Reproducible
 
+
 ## Reproducibility Framework 
-
-
 
 - DEMO: R power
 
@@ -68,8 +67,6 @@ your script?
 In this module, you'll learn how to use git and github from RStudio. 
 
 - DEMO: versioning
-
-
 
 
 ## Data Provenance (45 min)

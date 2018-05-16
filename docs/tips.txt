@@ -1,0 +1,7 @@
+
+### Find a good cheat sheet
+https://www.rstudio.com/resources/cheatsheets/
+
+### Tab completion
+
+### 

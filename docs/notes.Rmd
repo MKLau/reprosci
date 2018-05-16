@@ -1,0 +1,229 @@
+Reproducible Science with R
+===========================
+
+# Dr. Matthew K. Lau
+# Class Time: 4.5 hours
+
+## Overview: Why make your work reproducible and why R? (30 min)
+
+Science is driven by the exchange of information and
+knowledge. Currently, there is a lot that we can do to make research
+more transparent and useful. A recent study (Stodden *et al.* 2018)
+demonstrated that only 26% of studies published in *Science* could be
+reproduced. This was even more striking given that the study was
+conducted after the *Science* had instituted it's open data
+policy. 
+
+What this and other studies point to is the need to provide well
+documented data as well as the software that were needed to conduct
+the study. Luckily, advances in open-source computer languages, such
+as **R** and **python**, provide a way to produce computations that
+can more easily document scientific research in a transparent, easily
+shared way. 
+
+In this course, we will cover how to conduct **reproducible**
+scientific research using the **R** programming language and
+supporting software that will enable researchers to more clearly and
+easily document projects. Participants will gain experience coding in
+**R** using the *RStudio* IDE and the *git* version control system.
+
+Possible additional topics, if time and interest allows:
+- *Shiny Apps*
+- **R** *packages*
+- *github*
+
+## Being a good code community member 
+
+Like science, open-source software development is empowered by
+community. Everyone participating in this course will follow the Code
+of Conduct outline by the folks at ROpenSci
+(https://ropensci.org/coc/).
+
+*We all get out of this class what we put into it.*
+
+*Be considerate and respectiful of each other in speech and actions.*
+
+*Contribute a safe and effective learning experience for everyone.*
+
+
+https://adainitiative.org/
+
+
+## Reproducibility Framework (15 min)
+
+1. Setup your project so that there is a clear architecture (*RStudio*)
+2. Work so that your computation from initial data to finished results
+will be coded (wherever possible), including data cleaning and
+processing steps (**R**)
+3. Keep track of versions of your code as it (*git*)
+4. Make initial data available (whenever possible, *git*)
+5. Be organized, succinct in style, coding and documentation (**R**, *Markdown*)
+
+If you're interested in more details on how to conduct reproducible
+research, see the **TEE** (Transparency in Ecology and Evolution)
+website http://www.ecoevotransparency.org/ and the **FAIR**
+reproducible research guide at
+https://www.go-fair.org/fair-principles/.
+
+## RStudio (15 min)
+
+Download and install:
+
+1. **R** https://cran.r-project.org/
+2. *RStudio* https://www.rstudio.com/products/rstudio/download/#download/
+
+## Cheat Sheets (5 min)
+
+https://www.rstudio.com/resources/cheatsheets/
+
+
+## Example Project (15 min)
+
+
+- function anatomy
+- basic plotting
+
+## Data wrangling (30 min)
+
+
+File I/O
+
+Objects and assignments
+
+Data classes and types
+
+Indexing and sorting
+
+- Activity: manage the data for an analysis (order, sort)
+- Activity: testing data (typos, coersion, fixing)
+
+
+
+For Further Study:
+
+- *dplyr* reorganize data
+- *stringr* manipulate text (aka. "strings")
+- *lubridate* for handling dates and times
+- *purrr* "apply" functions = functions for repeating functions
+
+## Data testing (30 min)
+
+Conditional statements
+Conditional operations
+
+```{r}
+
+if (!(is.numeric(x[,1]))){warning("Danger Will Robinson!")}else{}
+
+```
+
+
+## Project Architecture (15 min)
+
+In this section, we'll go over some project best practices that
+generally work for computational projects. We'll initiate a new
+project from *RStudio* and set up a file system with:
+
+- **README**: describes the project and associated files
+- **data**: folder to collect relevant data files or links
+- **src**: where all of the **R** scripts should be kept
+- **results**: this is where output from scripts can go
+- **docs**: further documentation and relevant files (e.g. notes, papers)
+- **bin**: ADVANCED - if you need to include other associated software
+
+## Getting help with R (10 min)
+
+1. *?*, *??*, *help*
+2. Google
+3. Stackoverflow
+
+## Working directories and relative paths (30 min)
+
+
+
+## R Packages and CRAN (15 min)
+
+Functions and other information are grouped into packages and hosted
+on CRAN (Comprehensive **R** Archive Network). This modular structure
+allows **R** to grow but still be usable. As of 2016 there were over
+8,000 packages on CRAN, an increase of 2,000 from 2015. 
+
+https://www.r-bloggers.com/on-the-growth-of-cran-packages/
+
+With regard to reproducibility, this creates an issue as CRAN and
+**R** are constantly changing. That is why it is imperative to keep
+track of the "dependencies" of your code. Ways to deal with
+dependencies:
+
+1. Minimize them
+2. Track them (*sessionInfo*, *packrat*, containers/*rocker*, VM/*encapsulator*)
+
+https://rviews.rstudio.com/2018/01/18/package-management-for-reproducible-r-code/
+
+One easy way would be to just record the system and library
+information using *sessionInfo*:
+
+```{r}
+print(sessionInfo(), locale = FALSE)
+```
+
+Although there are other more sophisticated ways to implement
+dependency reproducibility, we'll go over *packrat*, which is
+implemented in *RStudio*:
+
+1. Tools -> Project Options
+2. Packrat -> Use packrat for this project
+3. Use default settings and continue
+
+More info on *packrat* can be found here: https://rstudio.github.io/packrat/rstudio.html
+
+One handy thing that *packrat* enables is that it can detect what
+packages your project isn't using and remove them. Use the following
+bit of code to do this:
+
+```{r}
+packrat::clean()
+```
+
+Note, this syntax that uses the "::" double colon allows you to
+specify the package ("packrat") that contains the function ("clean")
+that you want to use. This is extremely useful as it means that you
+don't always have to load (i.e. *library*) the entire package when you
+just want to use one or a few functions. 
+
+## Style: Best Practices and Intro to Packages (15 min)
+
+Hadley Whickam's guide to style http://adv-r.had.co.nz/Style.html
+
+Re-format code in *RStudio* with:
+
+1. Code -> Reformat Code
+
+## "Backing Up" Version Control (1 hour)
+
+In this module, you'll learn how to use the version control system,
+known as git, from RStudio. We will cover the basic topics of how to:
+
+1. Initiate a project "repository"
+2. Create, "add" and "commit" changes
+3. View "diffs" and share a compressed project
+
+We will not cover how to use the online git repository known as
+*github*. Using *github* provides a central server through which
+projects can be shared among collaborators in real-time via a system
+that keeps users from stepping on each other's "digital toes". To
+setup a free, private repository through *github.com*, go to their
+educational program webpage: https://education.github.com
+
+## Scientific Notebooks (30 min)
+
+
+## Efficiency (30 min)
+
+*profVis*
+
+## Tracking Dependencies (30 min)
+
+- *packrat*
+- *provR* and *RDataTracker*
+

@@ -1,0 +1,239 @@
+\documentclass[11pt,]{article}
+\usepackage[]{mathpazo}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+  \else
+    \usepackage{fontspec}
+  \fi
+  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+\fi
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\usepackage{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\usepackage[margin=1in]{geometry}
+\usepackage{hyperref}
+\hypersetup{unicode=true,
+            pdftitle={Reproducible Science with R},
+            pdfauthor={Matthew K. Lau},
+            pdfborder={0 0 0},
+            breaklinks=true}
+\urlstyle{same}  % don't use monospace font for urls
+\usepackage{graphicx,grffile}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+\IfFileExists{parskip.sty}{%
+\usepackage{parskip}
+}{% else
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{0}
+% Redefines (sub)paragraphs to behave more like sections
+\ifx\paragraph\undefined\else
+\let\oldparagraph\paragraph
+\renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+\let\oldsubparagraph\subparagraph
+\renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+
+%%% Use protect on footnotes to avoid problems with footnotes in titles
+\let\rmarkdownfootnote\footnote%
+\def\footnote{\protect\rmarkdownfootnote}
+
+%%% Change title format to be more compact
+\usepackage{titling}
+
+% Create subtitle command for use in maketitle
+\newcommand{\subtitle}[1]{
+  \posttitle{
+    \begin{center}\large#1\end{center}
+    }
+}
+
+\setlength{\droptitle}{-2em}
+  \title{Reproducible Science with R}
+  \pretitle{\vspace{\droptitle}\centering\huge}
+  \posttitle{\par}
+  \author{Matthew K. Lau}
+  \preauthor{\centering\large\emph}
+  \postauthor{\par}
+  \predate{\centering\large\emph}
+  \postdate{\par}
+  \date{June 7, 14 and 21 (Total = 4.5 hrs)}
+
+\linespread{1.05}
+
+\begin{document}
+\maketitle
+
+\hypertarget{why-make-your-work-reproducible-and-why-r}{%
+\subsection{Why make your work reproducible and why
+R?}\label{why-make-your-work-reproducible-and-why-r}}
+
+Science is driven by the exchange of information and knowledge. A recent
+study (Stodden \emph{et al.} 2018) demonstrated that only 26\% of
+studies published in the journal \emph{Science} could be reproduced.
+This was even more striking given that the study was conducted after
+\emph{Science} had instituted its open data policy. Luckily, advances in
+open-source computer languages, such as \textbf{R}, provide a way to
+produce computations that can more easily document scientific research
+in a transparent, easily shared way.
+
+In this course, we will cover how to conduct \textbf{reproducible}
+scientific research using the \textbf{R} programming language and
+supporting software that will enable researchers to more clearly and
+easily document projects. Participants will gain experience coding in
+\textbf{R} using the \emph{RStudio} IDE and using other software for
+reproducible research, such as the \emph{git} version control system.
+
+\hypertarget{course-outline}{%
+\subsection{Course Outline}\label{course-outline}}
+
+The course will be a mix of demos, discussions and activities:
+
+\textbf{Day 1}
+
+\begin{itemize}
+\tightlist
+\item
+  Reproducibility Framework (10 min)
+\item
+  \emph{RStudio} tour (10 min)
+\item
+  ACTIVITY: Example Project (15 min)
+\item
+  Getting help with R (5 min)
+\item
+  BREAK (10 min)
+\item
+  Basic plotting and function anatomy (10 min)
+\item
+  ACTIVITY: Write your own plot code (10 min)
+\item
+  Q/A and tips
+\end{itemize}
+
+\textbf{Day 2}
+
+\begin{itemize}
+\tightlist
+\item
+  Project Architecture (10 min)
+\item
+  ACTIVITY: Ecological data project (20 min)
+\item
+  BREAK (10 min)
+\item
+  Data wrangling and testing (15 min)
+\item
+  ACTIVITY: Test those data (20 min)
+\item
+  Q/A and tips
+\end{itemize}
+
+\textbf{Day 3}
+
+\begin{itemize}
+\tightlist
+\item
+  Style: Best Practices (5 min)
+\item
+  ``Backing Up'' Version Control (20 min)
+\item
+  ACTIVITY: Initiate git for your project (30 min)
+\item
+  Linear models (5 min)
+\item
+  ACTIVITY: Add a linear model and version your code (30 min)
+\item
+  BREAK (10 min)
+\item
+  Dependencies: R Packages, CRAN and \emph{packrat} (10 min)
+\item
+  ACTIVITY: Use packrat
+\item
+  Q/A and tips
+\end{itemize}
+
+\hypertarget{before-class-15-20-min}{%
+\subsection{Before Class (15-20 min)}\label{before-class-15-20-min}}
+
+Download and install:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{R} \url{https://cran.r-project.org/}
+\item
+  \emph{RStudio}
+  \url{https://www.rstudio.com/products/rstudio/download/\#download/}
+\end{enumerate}
+
+The course notes can be found in the docs directory of my course repo:
+\url{https://github.com/MKLau/reprosci/archive/master.zip}
+
+I also highly recommend the following cheat sheets for reference:
+\url{https://www.rstudio.com/resources/cheatsheets/}
+
+Also, review the code of conduct.
+
+\hypertarget{code-of-conduct-aka.-how-to-be-a-good-community-member}{%
+\subsection{Code of Conduct (aka. how to be a good community
+member)}\label{code-of-conduct-aka.-how-to-be-a-good-community-member}}
+
+Like science, open-source software development is empowered by
+community. Everyone participating in this course will follow the Code of
+Conduct outline by the folks at ROpenSci
+(\url{https://ropensci.org/coc}).
+
+\emph{Be considerate and respectiful of each other in speech and
+actions} \emph{Contribute a safe and effective learning experience for
+everyone} \emph{We all get out of this class what we put into it}
+
+See more at \url{https://adainitiative.org}
+
+\hypertarget{possible-advanced-topic-discussions-via-slack}{%
+\subsection{Possible Advanced Topic Discussions via
+Slack}\label{possible-advanced-topic-discussions-via-slack}}
+
+\begin{itemize}
+\tightlist
+\item
+  Creating \emph{Shiny Apps}
+\item
+  Writing \textbf{R} \emph{packages}
+\item
+  Using \emph{github}
+\item
+  Scientific notebooks with RMarkdown
+\item
+  Identifying code inefficiency with profVis
+\item
+  Data provenance in R
+\end{itemize}
+
+
+\end{document}
