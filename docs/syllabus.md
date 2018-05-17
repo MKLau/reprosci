@@ -104,7 +104,8 @@ of Conduct outline by the folks at ROpenSci
 
 ## Advanced Topic Discussions via Slack (Depending on Interests)
 
-*RMarkdown*, *dplyr*, *ggplot*, *github*, *Shiny Apps*, *R packages*, *Code performance with profVis*, *Data Provenance in R*
+*RMarkdown*, *dplyr*, *ggplot*, *github*, *Shiny Apps*, *R packages*,
+ *Code performance with profVis*, *Data Provenance in R*, *Open Licensing*
 
 ## References
 
