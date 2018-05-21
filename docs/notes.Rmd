@@ -4,7 +4,11 @@ Reproducible Science with R
 # Dr. Matthew K. Lau
 # Class Time: 4.5 hours
 
-## Overview: Why make your work reproducible and why R? (30 min)
+<!--           -->
+<!-- **Day 1** -->
+<!--           -->
+
+# Overview: Why make your work reproducible and why R? (30 min)
 
 Science is driven by the exchange of information and
 knowledge. Currently, there is a lot that we can do to make research
@@ -19,7 +23,7 @@ documented data as well as the software that were needed to conduct
 the study. Luckily, advances in open-source computer languages, such
 as **R** and **python**, provide a way to produce computations that
 can more easily document scientific research in a transparent, easily
-shared way. 
+shared way.
 
 In this course, we will cover how to conduct **reproducible**
 scientific research using the **R** programming language and
@@ -32,7 +36,7 @@ Possible additional topics, if time and interest allows:
 - **R** *packages*
 - *github*
 
-## Being a good code community member 
+# Being a good code community member 
 
 Like science, open-source software development is empowered by
 community. Everyone participating in this course will follow the Code
@@ -45,11 +49,12 @@ of Conduct outline by the folks at ROpenSci
 
 *Contribute a safe and effective learning experience for everyone.*
 
-
 https://adainitiative.org/
 
 
-## Reproducibility Framework (15 min)
+# Reproducibility Framework (15 min)
+
+**Max(reproducibility) = Data * Software * Documentation**
 
 1. Setup your project so that there is a clear architecture (*RStudio*)
 2. Work so that your computation from initial data to finished results
@@ -65,60 +70,63 @@ website http://www.ecoevotransparency.org/ and the **FAIR**
 reproducible research guide at
 https://www.go-fair.org/fair-principles/.
 
-## RStudio (15 min)
+# RStudio Tour (20 min)
 
 Download and install:
 
 1. **R** https://cran.r-project.org/
 2. *RStudio* https://www.rstudio.com/products/rstudio/download/#download/
 
-## Cheat Sheets (5 min)
+*Cheat Sheets*
 
 https://www.rstudio.com/resources/cheatsheets/
 
+https://www.rstudio.com/wp-content/uploads/2016/10/r-cheat-sheet-3.pdf
 
-## Example Project (15 min)
+# Activity: Example Project (15 min)
 
+Open up the example project and run the script. 
+ 
+# Yo, Matt, it's time to take a break!
+
+# Anatomy of an R Script (20 min)
 
 - function anatomy
+- objects
+- assignments
 - basic plotting
 
-## Data wrangling (30 min)
+## Getting help with R (5 min)
+
+1. *?*, *??*, *help*
+2. Google
+3. Stackoverflow
 
 
-File I/O
+# Activity: Write your own plot code (10 min)
 
-Objects and assignments
+1. Open up a new script window
+2. Write a header
+3. Comment out your header
+4. Save your initial script
+5. Copy the necessary code from the example script
+6. Make a different plot
 
-Data classes and types
+# Review and Q/A 
 
-Indexing and sorting
+1. Importance of reproducibility
+2. Max(reproduciblity) = data * software * docs
+3. RStudio
+4. R language (Arguments, Functions, Scripts)
+5. Plotting
 
-- Activity: manage the data for an analysis (order, sort)
-- Activity: testing data (typos, coersion, fixing)
+<!--           -->
+<!-- **Day 2** -->
+<!--           -->
 
+# Project Architecture (15 min)
 
-
-For Further Study:
-
-- *dplyr* reorganize data
-- *stringr* manipulate text (aka. "strings")
-- *lubridate* for handling dates and times
-- *purrr* "apply" functions = functions for repeating functions
-
-## Data testing (30 min)
-
-Conditional statements
-Conditional operations
-
-```{r}
-
-if (!(is.numeric(x[,1]))){warning("Danger Will Robinson!")}else{}
-
-```
-
-
-## Project Architecture (15 min)
+**Max(reproducibility) = Data * Software * Documentation**
 
 In this section, we'll go over some project best practices that
 generally work for computational projects. We'll initiate a new
@@ -131,17 +139,113 @@ project from *RStudio* and set up a file system with:
 - **docs**: further documentation and relevant files (e.g. notes, papers)
 - **bin**: ADVANCED - if you need to include other associated software
 
-## Getting help with R (10 min)
 
-1. *?*, *??*, *help*
-2. Google
-3. Stackoverflow
+# ACTIVITY: Ecological data project (10 min)
 
-## Working directories and relative paths (30 min)
+Start a new project and outline a script that will: 
+
+1. Import data
+2. Do some data management
+3. Do some analyses
+4. Make a plot
+
+# Data wrangling (35 min)
+
+File I/O = read.* and write.*
+
+Working directories and relative paths = getwd, setwd, "./../../"
+
+Objects and assignments = x <- 10 (=, ->, assign)
+
+Mode = Scalars, vectors, matrices, arrays, lists, data.frames
+
+Class = numeric, character, factor, logical, etc. 
+
+Indexing = x[1], x[1,1], x[[1]], 
+
+Sorting = sort(x), order(x)
+
+# Yo, Matt, it's time to take a break!
+
+
+# Style: Best Practices and Intro to Packages (5 min)
+
+Hadley Whickam's guide to style http://adv-r.had.co.nz/Style.html
+
+Re-format code in *RStudio* with:
+
+1. Code -> Reformat Code
+
+
+# Data testing (10 min)
+
+Conditional operations
+Conditional statements
+Logical type
+
+```{r}
+
+if (!(is.numeric(x[,1]))){warning("Danger Will Robinson!")}else{}
+
+```
+
+
+## Activity: Write your own test! (10 min)
+
+
+# Review and Q/A 
+
+1. Project organization
+2. Ecological data
+3. Data testing 
 
 
 
-## R Packages and CRAN (15 min)
+## Further Study:
+
+- *dplyr* = reorganize data
+- *stringr* manipulate text (aka. "strings")
+- *lubridate* for handling dates and times
+- *sp* and *raster* for spatial datasets
+- *purrr* "apply" functions = functions for repeating functions
+
+
+<!--           -->
+<!-- **Day 3** -->
+<!--           -->
+
+
+# "Backing Up" Version Control (30 min)
+
+**Max(reproducibility) = Data * Software * Documentation**
+
+In this module, you'll learn how to use the version control system,
+known as git, from RStudio. We will cover the basic topics of how to:
+
+1. Initiate a project "repository"
+2. Create, "add" and "commit" changes
+3. View "diffs" and share a compressed project
+
+We will not cover how to use the online git repository known as
+*github*. Using *github* provides a central server through which
+projects can be shared among collaborators in real-time via a system
+that keeps users from stepping on each other's "digital toes". To
+setup a free, private repository through *github.com*, go to their
+educational program webpage: https://education.github.com
+
+## Activity: Setup your ecological data project as a repository (15 min)
+
+1. Using RStudio's menu system, turn on git support
+2. Make some changes to your script
+3. Add them to the "stage"
+4. Review the changes
+5. Commit them
+
+## Wanna go back in time! (5 min)
+
+# Yo, Matt, it's time to take a break!
+
+## Software Dependencies: R Packages and CRAN *et al.* (10 min)
 
 Functions and other information are grouped into packages and hosted
 on CRAN (Comprehensive **R** Archive Network). This modular structure
@@ -167,6 +271,8 @@ information using *sessionInfo*:
 print(sessionInfo(), locale = FALSE)
 ```
 
+# *packrat* (15 min)
+
 Although there are other more sophisticated ways to implement
 dependency reproducibility, we'll go over *packrat*, which is
 implemented in *RStudio*:
@@ -175,7 +281,8 @@ implemented in *RStudio*:
 2. Packrat -> Use packrat for this project
 3. Use default settings and continue
 
-More info on *packrat* can be found here: https://rstudio.github.io/packrat/rstudio.html
+More info on *packrat* can be found here:
+https://rstudio.github.io/packrat/rstudio.html
 
 One handy thing that *packrat* enables is that it can detect what
 packages your project isn't using and remove them. Use the following
@@ -191,39 +298,34 @@ that you want to use. This is extremely useful as it means that you
 don't always have to load (i.e. *library*) the entire package when you
 just want to use one or a few functions. 
 
-## Style: Best Practices and Intro to Packages (15 min)
+# Wrap-up on Reproducibility with **R** (5 min)
 
-Hadley Whickam's guide to style http://adv-r.had.co.nz/Style.html
-
-Re-format code in *RStudio* with:
-
-1. Code -> Reformat Code
-
-## "Backing Up" Version Control (1 hour)
-
-In this module, you'll learn how to use the version control system,
-known as git, from RStudio. We will cover the basic topics of how to:
-
-1. Initiate a project "repository"
-2. Create, "add" and "commit" changes
-3. View "diffs" and share a compressed project
-
-We will not cover how to use the online git repository known as
-*github*. Using *github* provides a central server through which
-projects can be shared among collaborators in real-time via a system
-that keeps users from stepping on each other's "digital toes". To
-setup a free, private repository through *github.com*, go to their
-educational program webpage: https://education.github.com
-
-## Scientific Notebooks (30 min)
+1. Max(reproducible) = data * software * docs
+2. Project architecture for better access
+3. Document (comment, follow style, "Brevity is the soul of wit.")
+4. Share your results
+5. Planned obsolescence: Backup and version
 
 
-## Efficiency (30 min)
+# Possible: Advanced Topics Courses (5 min)
 
-*profVis*
+- Matrix operations and linear algebra **%*%**
+- Advanced plotting with *ggplot*
+- Community analysis with *vegan* and *ecodist*
+- Scientific notebooks with *rmarkdown* or *jupyter*
+- Web apps with *shiny*
+- Efficiency with *profVis*
+- Network analysis with *enaR*
+- Spatial data analysis with *sp* and *raster*
+- Mapping with *googlevis*
+- Automated workflow tracking with data provenance *RDatatracker*
+- Code cleaning with *Rclean*
+- How to work on Harvard's Odyssey super cluster
 
-## Tracking Dependencies (30 min)
 
-- *packrat*
-- *provR* and *RDataTracker*
+# Last round of Q/A 
 
+
+
+
+# Survey (10 min)
