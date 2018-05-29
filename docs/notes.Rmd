@@ -1,14 +1,15 @@
 Reproducible Science with R
 ===========================
 
-# Dr. Matthew K. Lau
-# Class Time: 4.5 hours
+Dr. Matthew K. Lau
+
+Class Time: 4.5 hours
 
 <!--           -->
 <!-- **Day 1** -->
 <!--           -->
 
-# Overview: Why make your work reproducible and why R? (30 min)
+# Overview: Why make your work reproducible and why R? (15 min)
 
 Science is driven by the exchange of information and
 knowledge. Currently, there is a lot that we can do to make research
@@ -36,7 +37,7 @@ Possible additional topics, if time and interest allows:
 - **R** *packages*
 - *github*
 
-# Being a good code community member 
+# Being a good code community member (5 min)
 
 Like science, open-source software development is empowered by
 community. Everyone participating in this course will follow the Code
@@ -52,7 +53,7 @@ of Conduct outline by the folks at ROpenSci
 https://adainitiative.org/
 
 
-# Reproducibility Framework (15 min)
+# Reproducibility Framework (10 min)
 
 **Max(reproducibility) = Data * Software * Documentation**
 
@@ -60,7 +61,7 @@ https://adainitiative.org/
 2. Work so that your computation from initial data to finished results
 will be coded (wherever possible), including data cleaning and
 processing steps (**R**)
-3. Keep track of versions of your code as it (*git*)
+3. Keep track of versions of your code (*git*)
 4. Make initial data available (whenever possible, *git*)
 5. Be organized, succinct in style, coding and documentation (**R**, *Markdown*)
 
@@ -70,7 +71,8 @@ website http://www.ecoevotransparency.org/ and the **FAIR**
 reproducible research guide at
 https://www.go-fair.org/fair-principles/.
 
-# RStudio Tour (20 min)
+
+# RStudio Tour (10 min)
 
 Download and install:
 
@@ -83,27 +85,36 @@ https://www.rstudio.com/resources/cheatsheets/
 
 https://www.rstudio.com/wp-content/uploads/2016/10/r-cheat-sheet-3.pdf
 
+**R** is a language, RStudio is an interface to R and other tools.
+
+*Parts of RStudio*
+
+- "Workbench"
+- File system
+- Tabs
+- Console 
+- Script(s)
+- Help (with RStudio and R)
+- Working directory
+
 # Activity: Example Project (15 min)
 
-Open up the example project and run the script. 
- 
-# Yo, Matt, it's time to take a break!
+Download and open up the example project in RStudio, check your
+working directory and run the script.
 
-# Anatomy of an R Script (20 min)
+# Yo, Matt, it's time to take a break! (10 min)
+
+<!-- 60 min -->
+
+# Anatomy of an R Script (10 min)
 
 - function anatomy
 - objects
 - assignments
 - basic plotting
 
-## Getting help with R (5 min)
-
-1. *?*, *??*, *help*
-2. Google
-3. Stackoverflow
-
-
 # Activity: Write your own plot code (10 min)
+
 
 1. Open up a new script window
 2. Write a header
@@ -112,13 +123,27 @@ Open up the example project and run the script.
 5. Copy the necessary code from the example script
 6. Make a different plot
 
-# Review and Q/A 
+**Tips**
+
+*Getting help with R*:
+
+- *?*, *??*, *help*
+- Google ("How do I _____ in R?")
+- Community (This is not a a test, this is life)
+
+*Annotate*:
+
+- Hashtag hashtag!
+
+
+# Review and Q/A (10 min)
 
 1. Importance of reproducibility
 2. Max(reproduciblity) = data * software * docs
 3. RStudio
 4. R language (Arguments, Functions, Scripts)
-5. Plotting
+5. Your own script
+6. Plotting
 
 <!--           -->
 <!-- **Day 2** -->
