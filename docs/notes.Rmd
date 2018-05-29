@@ -149,7 +149,7 @@ working directory and run the script.
 <!-- **Day 2** -->
 <!--           -->
 
-# Project Architecture (15 min)
+# Project Architecture (10 min)
 
 **Max(reproducibility) = Data * Software * Documentation**
 
@@ -164,17 +164,16 @@ project from *RStudio* and set up a file system with:
 - **docs**: further documentation and relevant files (e.g. notes, papers)
 - **bin**: ADVANCED - if you need to include other associated software
 
-
 # ACTIVITY: Ecological data project (10 min)
 
-Start a new project and outline a script that will: 
+Setup a new project and outline a script that will: 
 
 1. Import data
 2. Do some data management
 3. Do some analyses
 4. Make a plot
 
-# Data wrangling (35 min)
+# Data wrangling (15 min)
 
 File I/O = read.* and write.*
 
@@ -190,8 +189,12 @@ Indexing = x[1], x[1,1], x[[1]],
 
 Sorting = sort(x), order(x)
 
-# Yo, Matt, it's time to take a break!
+# Activity: Wrangle those data! (10 min)
 
+
+# Yo, Matt, it's time to take a break! (10 min)
+
+<!-- 60 min -->
 
 # Style: Best Practices and Intro to Packages (5 min)
 
@@ -200,7 +203,6 @@ Hadley Whickam's guide to style http://adv-r.had.co.nz/Style.html
 Re-format code in *RStudio* with:
 
 1. Code -> Reformat Code
-
 
 # Data testing (10 min)
 
@@ -214,16 +216,15 @@ if (!(is.numeric(x[,1]))){warning("Danger Will Robinson!")}else{}
 
 ```
 
+# Activity: Write your own test! (10 min)
 
-## Activity: Write your own test! (10 min)
 
 
-# Review and Q/A 
+# Review and Q/A (10 min)
 
 1. Project organization
 2. Ecological data
 3. Data testing 
-
 
 
 ## Further Study:
@@ -317,13 +318,13 @@ bit of code to do this:
 packrat::clean()
 ```
 
-Note, this syntax that uses the "::" double colon allows you to
-specify the package ("packrat") that contains the function ("clean")
-that you want to use. This is extremely useful as it means that you
-don't always have to load (i.e. *library*) the entire package when you
-just want to use one or a few functions. 
+**ProTip**: this syntax uses "::" (i.e. a double colon) allowing you
+to specify the package ("packrat") that contains the function
+("clean") that you want to use. This is extremely useful as it means
+that you don't always have to load (i.e. *library*) the entire package
+when you just want to use one or a few functions.
 
-# Wrap-up on Reproducibility with **R** (5 min)
+# Wrap-up on Reproducibility with **R** (10 min)
 
 1. Max(reproducible) = data * software * docs
 2. Project architecture for better access
