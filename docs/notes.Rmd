@@ -241,7 +241,7 @@ if (!(is.numeric(x[,1]))){warning("Danger Will Robinson!")}else{}
 <!--           -->
 
 
-# "Backing Up" Version Control (30 min)
+# "Backing Up" Version Control (10 min)
 
 **Max(reproducibility) = Data * Software * Documentation**
 
@@ -259,7 +259,8 @@ that keeps users from stepping on each other's "digital toes". To
 setup a free, private repository through *github.com*, go to their
 educational program webpage: https://education.github.com
 
-## Activity: Setup your ecological data project as a repository (15 min)
+
+# Activity: Setup your ecological data project as a repository (10 min)
 
 1. Using RStudio's menu system, turn on git support
 2. Make some changes to your script
@@ -267,11 +268,37 @@ educational program webpage: https://education.github.com
 4. Review the changes
 5. Commit them
 
-## Wanna go back in time! (5 min)
+# Commit best practices (5 min)
+
+1. Commits should represent a task that has progressed or completed
+2. Files with changes relevant to those tasks should be staged
+3. In general commit often and describe commits succinctly but
+informatively
+
+Examples:
+
+- "Some changes"
+- "Added data import of plant data"
+
+# Branching (10 min)
+
+- Separates commits
+
+# Activity: Commit! (5 min)
+
+# Activity: Wanna go back in time! (10 min)
+
+Rolling back versions
+
+1. View history
+2. Choose the time point (here's where commit messages are key!)
+3. Revert
 
 # Yo, Matt, it's time to take a break!
 
-## Software Dependencies: R Packages and CRAN *et al.* (10 min)
+<!-- 60 min -->
+
+# Software Dependencies: R Packages and CRAN *et al.* (5 min)
 
 Functions and other information are grouped into packages and hosted
 on CRAN (Comprehensive **R** Archive Network). This modular structure
@@ -286,7 +313,8 @@ track of the "dependencies" of your code. Ways to deal with
 dependencies:
 
 1. Minimize them
-2. Track them (*sessionInfo*, *packrat*, containers/*rocker*, VM/*encapsulator*)
+2. Track them (*sessionInfo*, *packrat*, containers/*rocker*,
+   VM/*encapsulator*)
 
 https://rviews.rstudio.com/2018/01/18/package-management-for-reproducible-r-code/
 
@@ -297,7 +325,7 @@ information using *sessionInfo*:
 print(sessionInfo(), locale = FALSE)
 ```
 
-# *packrat* (15 min)
+# *packrat* (10 min)
 
 Although there are other more sophisticated ways to implement
 dependency reproducibility, we'll go over *packrat*, which is
@@ -324,7 +352,7 @@ to specify the package ("packrat") that contains the function
 that you don't always have to load (i.e. *library*) the entire package
 when you just want to use one or a few functions.
 
-# Wrap-up on Reproducibility with **R** (10 min)
+# Wrap-up on Reproducibility with **R** (5 min)
 
 1. Max(reproducible) = data * software * docs
 2. Project architecture for better access
@@ -334,6 +362,12 @@ when you just want to use one or a few functions.
 
 
 # Possible: Advanced Topics Courses (5 min)
+
+1-hour sessions
+
+Zoom + Slack
+
+Museum or remote locations
 
 - Matrix operations and linear algebra **%*%**
 - Advanced plotting with *ggplot*
@@ -348,10 +382,4 @@ when you just want to use one or a few functions.
 - Code cleaning with *Rclean*
 - How to work on Harvard's Odyssey super cluster
 
-
-# Last round of Q/A 
-
-
-
-
-# Survey (10 min)
+# Survey (5-10 min)
