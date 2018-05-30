@@ -173,6 +173,8 @@ Setup a new project and outline a script that will:
 3. Do some analyses
 4. Make a plot
 
+
+
 # Data wrangling (15 min)
 
 File I/O = read.* and write.*
@@ -210,8 +212,7 @@ Conditional operations
 Conditional statements
 Logical type
 
-```{r}
-
+```{r, eval = FALSE}
 if (!(is.numeric(x[,1]))){warning("Danger Will Robinson!")}else{}
 
 ```
@@ -342,7 +343,7 @@ One handy thing that *packrat* enables is that it can detect what
 packages your project isn't using and remove them. Use the following
 bit of code to do this:
 
-```{r}
+```{r, eval = FALSE}
 packrat::clean()
 ```
 
@@ -369,17 +370,18 @@ Zoom + Slack
 
 Museum or remote locations
 
-- Matrix operations and linear algebra **%*%**
+- Scientific notebooks with *rmarkdown* or *jupyter*
+- Advanced command line BASH
+- Advanced git and github
+- Web apps with *shiny*
 - Advanced plotting with *ggplot*
 - Community analysis with *vegan* and *ecodist*
-- Scientific notebooks with *rmarkdown* or *jupyter*
-- Web apps with *shiny*
+- Matrix operations and linear algebra **%*%**
 - Efficiency with *profVis*
 - Network analysis with *enaR*
-- Spatial data analysis with *sp* and *raster*
 - Mapping with *googlevis*
+- Spatial data analysis with *sp* and *raster*
 - Automated workflow tracking with data provenance *RDatatracker*
 - Code cleaning with *Rclean*
-- How to work on Harvard's Odyssey super cluster
 
 # Survey (5-10 min)
