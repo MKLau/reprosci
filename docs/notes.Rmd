@@ -63,7 +63,9 @@ will be coded (wherever possible), including data cleaning and
 processing steps (**R**)
 3. Keep track of versions of your code (*git*)
 4. Make initial data available (whenever possible, *git*)
-5. Be organized, succinct in style, coding and documentation (**R**, *Markdown*)
+5. Keep track of software dependencies (*packrat*, *git*)
+5. Be organized, succinct in style, coding and documentation (**R**,
+   *Markdown*, *formatR*)
 
 If you're interested in more details on how to conduct reproducible
 research, see the **TEE** (Transparency in Ecology and Evolution)
@@ -325,6 +327,8 @@ information using *sessionInfo*:
 ```{r}
 print(sessionInfo(), locale = FALSE)
 ```
+
+A good place for this information is in your README.
 
 # *packrat* (10 min)
 
