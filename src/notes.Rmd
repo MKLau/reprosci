@@ -1,15 +1,32 @@
-Reproducible Science with R
-===========================
+---
+title: Reproducible Science with R
+author: M.K. Lau
+output: html_document
 
-Dr. Matthew K. Lau
+---
+
+
+```{r, echo = FALSE, results = "hide", eval = FALSE}
+### https://rmarkdown.rstudio.com/lesson-9.html
+library(tufte)
+rmarkdown::render("notes.Rmd", output_format = "html_document",output_file = "../docs/notes.html"); 
+rmarkdown::render("notes.Rmd", output_format = "pdf_document", output_file = "../docs/notes.pdf")
+rmarkdown::render("notes.Rmd", output_format = "tufte_handout", output_file = "../docs/notes_tufte.pdf")
+rmarkdown::render("notes.Rmd", output_format = "tufte_html", output_file = "../docs/notes_tufte.html")
+rmarkdown::render("notes.Rmd", output_format = "slidy_presentation", output_file = "../docs/notes_slidy.html")
+rmarkdown::render("notes.Rmd", output_format = "beamer_presentation", output_file = "../docs/notes_beamer.pdf")
+
+```
 
 Class Time: 4.5 hours
 
-<!--           -->
-<!-- **Day 1** -->
-<!--           -->
+Goals: Use R and other tools to conduct reproducible research.
 
-# Overview: Why make your work reproducible and why R? (15 min)
+
+# Day 1
+
+
+## Overview: Why make your work reproducible and why R? (15 min)
 
 Science is driven by the exchange of information and
 knowledge. Currently, there is a lot that we can do to make research
@@ -37,7 +54,7 @@ Possible additional topics, if time and interest allows:
 - **R** *packages*
 - *github*
 
-# Being a good code community member (5 min)
+## Being a good code community member (5 min)
 
 Like science, open-source software development is empowered by
 community. Everyone participating in this course will follow the Code
@@ -74,7 +91,7 @@ reproducible research guide at
 https://www.go-fair.org/fair-principles/.
 
 
-# RStudio Tour (10 min)
+## RStudio Tour (10 min)
 
 Download and install:
 
@@ -99,23 +116,23 @@ https://www.rstudio.com/wp-content/uploads/2016/10/r-cheat-sheet-3.pdf
 - Help (with RStudio and R)
 - Working directory
 
-# Activity: Example Project (15 min)
+## Activity: Example Project (15 min)
 
 Download and open up the example project in RStudio, check your
 working directory and run the script.
 
-# Yo, Matt, it's time to take a break! (10 min)
+## Yo, Matt, it's time to take a break! (10 min)
 
 <!-- 60 min -->
 
-# Anatomy of an R Script (10 min)
+## Anatomy of an R Script (10 min)
 
 - function anatomy
 - objects
 - assignments
 - basic plotting
 
-# Activity: Write your own plot code (10 min)
+## Activity: Write your own plot code (10 min)
 
 
 1. Open up a new script window
@@ -138,7 +155,7 @@ working directory and run the script.
 - Hashtag hashtag!
 
 
-# Review and Q/A (10 min)
+## Review and Q/A (10 min)
 
 1. Importance of reproducibility
 2. Max(reproduciblity) = data * software * docs
@@ -147,11 +164,13 @@ working directory and run the script.
 5. Your own script
 6. Plotting
 
+# Day 2
+
 <!--           -->
 <!-- **Day 2** -->
 <!--           -->
 
-# Project Architecture (10 min)
+## Project Architecture (10 min)
 
 **Max(reproducibility) = Data * Software * Documentation**
 
@@ -166,7 +185,7 @@ project from *RStudio* and set up a file system with:
 - **docs**: further documentation and relevant files (e.g. notes, papers)
 - **bin**: ADVANCED - if you need to include other associated software
 
-# ACTIVITY: Ecological data project (10 min)
+## ACTIVITY: Ecological data project (10 min)
 
 Setup a new project and outline a script that will: 
 
@@ -177,7 +196,7 @@ Setup a new project and outline a script that will:
 
 
 
-# Data wrangling (15 min)
+## Data wrangling (15 min)
 
 File I/O = read.* and write.*
 
@@ -193,14 +212,14 @@ Indexing = x[1], x[1,1], x[[1]],
 
 Sorting = sort(x), order(x)
 
-# Activity: Wrangle those data! (10 min)
+## Activity: Wrangle those data! (10 min)
 
 
-# Yo, Matt, it's time to take a break! (10 min)
+## Yo, Matt, it's time to take a break! (10 min)
 
 <!-- 60 min -->
 
-# Style: Best Practices and Intro to Packages (5 min)
+## Style: Best Practices and Intro to Packages (5 min)
 
 Hadley Whickam's guide to style http://adv-r.had.co.nz/Style.html
 
@@ -208,7 +227,7 @@ Re-format code in *RStudio* with:
 
 1. Code -> Reformat Code
 
-# Data testing (10 min)
+## Data testing (10 min)
 
 Conditional operations
 Conditional statements
@@ -219,11 +238,11 @@ if (!(is.numeric(x[,1]))){warning("Danger Will Robinson!")}else{}
 
 ```
 
-# Activity: Write your own test! (10 min)
+## Activity: Write your own test! (10 min)
 
 
 
-# Review and Q/A (10 min)
+## Review and Q/A (10 min)
 
 1. Project organization
 2. Ecological data
@@ -239,12 +258,14 @@ if (!(is.numeric(x[,1]))){warning("Danger Will Robinson!")}else{}
 - *purrr* "apply" functions = functions for repeating functions
 
 
+# Day 3
+
 <!--           -->
 <!-- **Day 3** -->
 <!--           -->
 
 
-# "Backing Up" Version Control (10 min)
+## "Backing Up" Version Control (10 min)
 
 **Max(reproducibility) = Data * Software * Documentation**
 
@@ -263,7 +284,7 @@ setup a free, private repository through *github.com*, go to their
 educational program webpage: https://education.github.com
 
 
-# Activity: Setup your ecological data project as a repository (10 min)
+## Activity: Setup your ecological data project as a repository (10 min)
 
 1. Using RStudio's menu system, turn on git support
 2. Make some changes to your script
@@ -271,7 +292,7 @@ educational program webpage: https://education.github.com
 4. Review the changes
 5. Commit them
 
-# Commit best practices (5 min)
+## Commit best practices (5 min)
 
 1. Commits should represent a task that has progressed or completed
 2. Files with changes relevant to those tasks should be staged
@@ -283,13 +304,13 @@ Examples:
 - "Some changes"
 - "Added data import of plant data"
 
-# Branching (10 min)
+## Branching (10 min)
 
 - Separates commits
 
-# Activity: Commit! (5 min)
+## Activity: Commit! (5 min)
 
-# Activity: Wanna go back in time! (10 min)
+## Activity: Wanna go back in time! (10 min)
 
 Rolling back versions
 
@@ -297,11 +318,11 @@ Rolling back versions
 2. Choose the time point (here's where commit messages are key!)
 3. Revert
 
-# Yo, Matt, it's time to take a break!
+## Yo, Matt, it's time to take a break!
 
 <!-- 60 min -->
 
-# Software Dependencies: R Packages and CRAN *et al.* (5 min)
+## Software Dependencies: R Packages and CRAN *et al.* (5 min)
 
 Functions and other information are grouped into packages and hosted
 on CRAN (Comprehensive **R** Archive Network). This modular structure
@@ -330,7 +351,7 @@ print(sessionInfo(), locale = FALSE)
 
 A good place for this information is in your README.
 
-# *packrat* (10 min)
+## *packrat* (10 min)
 
 Although there are other more sophisticated ways to implement
 dependency reproducibility, we'll go over *packrat*, which is
@@ -357,7 +378,7 @@ to specify the package ("packrat") that contains the function
 that you don't always have to load (i.e. *library*) the entire package
 when you just want to use one or a few functions.
 
-# Wrap-up on Reproducibility with **R** (5 min)
+## Wrap-up on Reproducibility with **R** (5 min)
 
 1. Max(reproducible) = data * software * docs
 2. Project architecture for better access
@@ -366,7 +387,7 @@ when you just want to use one or a few functions.
 5. Planned obsolescence: Backup and version
 
 
-# Possible: Advanced Topics Courses (5 min)
+## Possible: Advanced Topics Courses (5 min)
 
 1-hour sessions
 
@@ -388,4 +409,4 @@ Museum or remote locations
 - Automated workflow tracking with data provenance *RDatatracker*
 - Code cleaning with *Rclean*
 
-# Survey (5-10 min)
+## Survey (5-10 min)
