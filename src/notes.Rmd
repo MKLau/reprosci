@@ -18,10 +18,14 @@ rmarkdown::render("notes.Rmd", output_format = "beamer_presentation", output_fil
 
 ```
 
+
+
 Class Time: 4.5 hours
 
 Goals: Use R and other tools to conduct reproducible research.
 
+
+![Wordcloud pre-class comments](../docs/cloud_2018.pdf)
 
 # Day 1
 
@@ -33,8 +37,7 @@ knowledge. Currently, there is a lot that we can do to make research
 more transparent and useful. A recent study (Stodden *et al.* 2018)
 demonstrated that only 26% of studies published in *Science* could be
 reproduced. This was even more striking given that the study was
-conducted after the *Science* had instituted it's open data
-policy. 
+conducted after the *Science* had instituted it's open data policy.
 
 What this and other studies point to is the need to provide well
 documented data as well as the software that were needed to conduct
@@ -50,24 +53,44 @@ easily document projects. Participants will gain experience coding in
 **R** using the *RStudio* IDE and the *git* version control system.
 
 Possible additional topics, if time and interest allows:
-- *Shiny Apps*
-- **R** *packages*
+
+- *RMarkdown* 
+- *dplyr*
+- *ggplot*
 - *github*
+- *Shiny Apps*
+- *R packages*
+- *Continuous Integration (e.g. Travis)*
+- *Posting data to web archives (e.g. Figshare)*
+- *Open Licensing*
+- *Code performance with profVis*
+- *Data Provenance in R* 
+- *Code cleaning with Rclean*
 
-## Being a good code community member (5 min)
+<!-- Philosophy: Reproducibility & Benefaction -->
+<!-- Science 44% w/ artefacts, 24% reproducible -->
+<!-- FAIR -->
+<!-- Experiment – Design and Observation -->
+<!-- Data – Digitizing and Storage -->
+<!-- Data – Wrangling (IO, assign, object, index, type, paths) -->
+<!-- Check & Test (conditionals) -->
+<!-- Computation – Analysis, Modeling, etc. -->
+<!-- Results -->
+<!-- Plotting -->
+<!-- Best Practices -->
+<!-- Notebooks (data + code + annotation) -->
+<!-- Style (formatR) -->
+<!-- Data and code = Open Access -->
+<!-- Github, Dataverse, Figshare, Dryad, EDI, NCBI -->
+<!-- Preservation -->
+<!-- Capsules (ReproZip) -->
+<!-- VMs (system independence) -->
+<!-- Provenance (provR) -->
+<!-- Code cleaning (cleanR) -->
+<!-- Continuous integration (Travis) -->
+<!-- Engagement (Websites, Blogs, Twitter, etc.) -->
+<!-- Life-long learning – ROpenSci, stackoverflow, Tidyverse -->
 
-Like science, open-source software development is empowered by
-community. Everyone participating in this course will follow the Code
-of Conduct outline by the folks at ROpenSci
-(https://ropensci.org/coc/).
-
-*We all get out of this class what we put into it.*
-
-*Be considerate and respectiful of each other in speech and actions.*
-
-*Contribute a safe and effective learning experience for everyone.*
-
-https://adainitiative.org/
 
 
 # Reproducibility Framework (10 min)
@@ -108,32 +131,72 @@ https://www.rstudio.com/wp-content/uploads/2016/10/r-cheat-sheet-3.pdf
 
 *Parts of RStudio*
 
-- "Workbench"
-- File system
-- Tabs
 - Console 
 - Script(s)
+- The "Workbench"
+- Tabs
+- File system
 - Help (with RStudio and R)
 - Working directory
 
+## Being a good code community member (5 min)
+
+Like science, open-source software development is empowered by
+community. Everyone participating in this course will follow the Code
+of Conduct outline by the folks at ROpenSci
+(https://ropensci.org/coc/).
+
+- *We all get out of this class what we put into it.*
+- *Be considerate and respectiful of each other in speech and actions.*
+- *Contribute a safe and effective learning experience for everyone.*
+
+Also, please take a look at the Ada Initiative webpage for more
+information about creating an inclusive coding community:
+https://adainitiative.org/
+
 ## Activity: Example Project (15 min)
 
-Download and open up the example project in RStudio, check your
-working directory and run the script.
+Download, unzip and open up the example project in RStudio, check your
+working directory and run the *basics.R* script.
 
-## Yo, Matt, it's time to take a break! (10 min)
+https://github.com/HarvardForest/repro_example/archive/master.zip
+
+# It's time to take a break! (10 min)
 
 <!-- 60 min -->
 
 ## Anatomy of an R Script (10 min)
 
+- Typical flow: read-in, wrangle and then analyze
+- comments
 - function anatomy
 - objects
 - assignments
 - basic plotting
 
-## Activity: Write your own plot code (10 min)
+Let's look a little more closely at basics.R
 
+```{r, eval = FALSE}
+# Basic R script
+
+# MK Lau
+
+# 15 April 2018
+
+dat <- read.csv(file = "./data/data.csv")
+
+cor.test(dat[,"x"], dat[,"y"])
+
+plot(y ~ x, data = dat)
+```
+
+## Getting help with R
+
+- *?*, *??*, *help*
+- Google ("How do I _____ in R?")
+- Community (This is not a a test, this is life)
+
+## Activity: Write your own plot code (10 min)
 
 1. Open up a new script window
 2. Write a header
@@ -141,19 +204,6 @@ working directory and run the script.
 4. Save your initial script
 5. Copy the necessary code from the example script
 6. Make a different plot
-
-**Tips**
-
-*Getting help with R*:
-
-- *?*, *??*, *help*
-- Google ("How do I _____ in R?")
-- Community (This is not a a test, this is life)
-
-*Annotate*:
-
-- Hashtag hashtag!
-
 
 ## Review and Q/A (10 min)
 
@@ -163,6 +213,8 @@ working directory and run the script.
 4. R language (Arguments, Functions, Scripts)
 5. Your own script
 6. Plotting
+
+
 
 # Day 2
 
