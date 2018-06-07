@@ -25,7 +25,7 @@ Class Time: 4.5 hours
 Goals: Use R and other tools to conduct reproducible research.
 
 
-![Wordcloud pre-class comments](../docs/cloud_2018.pdf)
+![Wordcloud pre-class comments](../docs/cloud_2018.png)
 
 # Day 1
 
@@ -127,14 +127,13 @@ https://www.rstudio.com/resources/cheatsheets/
 
 https://www.rstudio.com/wp-content/uploads/2016/10/r-cheat-sheet-3.pdf
 
-**R** is a language, RStudio is an interface to R and other tools.
+**R** is a language, *RStudio* is an interface to R and other tools.
 
 *Parts of RStudio*
 
-- Console 
-- Script(s)
-- The "Workbench"
-- Tabs
+- Console: where R code can be entered directly
+- Script(s): R code is text that is understood by an interpreter
+- The "Workbench": a collection of tools
 - File system
 - Help (with RStudio and R)
 - Working directory
@@ -460,5 +459,21 @@ Museum or remote locations
 - Spatial data analysis with *sp* and *raster*
 - Automated workflow tracking with data provenance *RDatatracker*
 - Code cleaning with *Rclean*
+
+## R Markdown Notebooks
+
+Markdown is a language use for "typesetting", like the HTML that makes
+up webpages. There is also a specific syntax that can be used to
+combin Markdown with the R language. This allows the creation of
+documents that combine text, code and output. This is an extremely
+useful tool for the scientific reproduciblity kit. One particular
+aspect that is extremely powerful is the ability to automatically
+create many different "rendered" documents from a single document,
+such as webpages, PDFs, Shiny Apps and many more formats.
+
+For more information, the following is a useful introduction to R
+Markdown notebooks.
+
+https://rmarkdown.rstudio.com/r_notebooks.html
 
 ## Survey (5-10 min)
