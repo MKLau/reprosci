@@ -1,7 +1,7 @@
 ---
 title: Reproducible Science with R (Day 1)
 author: M.K. Lau
-output: tufte_handout
+output: tufte_html
 
 ---
 
@@ -20,12 +20,10 @@ rmarkdown::render("notes.Rmd", output_format = "beamer_presentation", output_fil
 
 
 
-Class Time: 4.5 hours
+- **Total Class Time: 4.5 hours**
+- **Goals: Use R and other tools to conduct reproducible research.**
 
-Goals: Use R and other tools to conduct reproducible research.
-
-
-![Wordcloud pre-class comments](../docs/cloud_2018.png)
+![Wordcloud of pre-class survey comments.](../docs/cloud_2018.png)
 
 This is a diagram exploring the comments made by workshop participants
 regarding what they hope to gain from the course. A few things that
@@ -317,19 +315,69 @@ help. Here are some useful ways to get help:
 5. Getting help
 
 
+## Code to generate the wordcloud
+
+
+```{r, eval = FALSE}
+### Analysis of pre-workshop data for Students
+
+library(readxl)
+library(wordcloud)
+
+### Load data
+sheets <- readxl::excel_sheets(path="../data/local_data/R Workshop Pre&Post Surveys.xlsx")
+pre.data <- lapply(1:length(sheets), 
+                   readxl::read_xlsx, 
+                   path = "../data/local_data/R Workshop Pre&Post Surveys.xlsx")
+names(pre.data) <- sheets
+
+### Data wrangling
+quest <- as.data.frame(pre.data[[1]])[-1,]
+quest <- quest[grepl("pre", quest[,2]),]
+resp <- as.data.frame(pre.data[[2]])[-1,]
+
+### Text processing to generate wordcloud
+comments <- as.character(na.omit((resp[,"4"])))
+wc <- paste(comments, collapse = " ")
+wc <- tolower(wc)
+wc <- strsplit(wc, "")[[1]]
+wc <- wc[wc %in% c(letters, " ")]
+wc <- toupper(paste(wc, collapse = ""))
+wc <- strsplit(wc, split = " ")[[1]]
+wc <- table(wc)
+
+### Plotting
+pdf("../docs/cloud_2018.pdf", height = 10, width = 10)
+wordcloud(names(wc), wc, min.freq = 1)
+dev.off()
+
+```
+
+
 # Day 2
 
 <!--           -->
 <!-- **Day 2** -->
 <!--           -->
 
+## Stickys and Cheat sheets!
+
+*Please write what you would like me to call you on the front of your sticky*
+
+https://www.rstudio.com/resources/cheatsheets/
+
+- *RStudio IDE Cheat Sheet*
+- *Base R*
+
+![General scientific project pipeline.](../docs/project_pipeline.png)
+
 ## Reproducibility Mantra (5 min)
 
-**Max(reproducibility) = Data * Software * Documentation**
+**Max(reproducibility) = Documentation * Data * Software**
 
 ## Project Architecture (10 min)
 
-**Max(reproducibility) = Data * Software * Documentation**
+![General analytical script workflow.](../docs/workflow.png)
 
 In this section, we'll go over some project best practices that
 generally work for computational projects. We'll initiate a new
@@ -342,17 +390,14 @@ project from *RStudio* and set up a file system with:
 - **docs**: further documentation and relevant files (e.g. notes, papers)
 - **bin**: ADVANCED - if you need to include other associated software
 
-## More on Plotting
+## Activity: Operations (5 min)
 
-Layers upon layers
+Start a new script and write some code that creates two objects "a"
+equal to 2, "b" also equal to "2" and then create a third object "c"
+that is equal to the product of "a" and "b". Then, find the
+square-root of "c".
 
-## Activity: Operations
-
-Write some code that will creates two objects "a" equal to 2, "b" also
-equal to "2" and then create a third object "c" that is equal to the
-product of "a" and "b". Then, find the square-root of "c". 
-
-### Operations
+## Operations
 
 **R** has many mathematical operations, including
 
@@ -368,89 +413,329 @@ print("And more!")
 
 ```
 
+## More on Plotting (10 min)
+
+1. Plots are built in layers
+2. There is no *write* for plots, use *pdf*, *jpeg*, *png*, *tiff*,
+etc. and *dev.off* (see below)
+3. You can use formulae and the "data" argument in *plot* but not some
+functions, like *text*
+
+```{r, eval = FALSE}
+
+xy.dat <- read.csv("./data/data.csv")
+
+pdf(file = "./results/xy_plot.pdf")
+
+plot(y ~ x, data = xy.dat, 
+     xlab = "X Axis", ylab = "Y Axis")
+abline(lm(y ~ x, data = xy.dat))
+text(xy.dat[, "x"], xy.dat[, "y"], 
+     labels = xy.dat[, "x"])
+
+dev.off()
+
+```
 
 ## Activity: Write your own plot code (10 min)
 
 1. Open up a new script window
 2. Write a header
-3. Comment out your header
-4. Save your initial script
-5. Copy the necessary code from the example script
-6. Make a different plot
+3. Save your initial script
+4. Import the data.csv
+5. Make a different plot
+
+## Clean Code (5 min)
+
+Just because the computer can understand your code, doesn't mean a
+human can.
+
+*Have some style*
+
+Style guide = http://r-pkgs.had.co.nz/style.html
+
+- Comment clearly before sections (##) and judiciously after functions (#)
+- Use good syntax with the "reformat" function or run *formatR* on your code
+- Program "literately" with *Rmarkdown* or *Jupyter* notebooks
+
+*How best to name objects*
+
+- Keep it simple (3-10 characters)
+- Use a "." or "_" to separate
+- Don't start with numbers or operations
+- Case matters (UPPER and lower)
+- Rely on your comments for clarity
+
+```{r, eval = FALSE}
+
+## Here's a good name
+
+spp.loc <- read.csv("./data/species_coordinates.csv") 
+
+## Here're some not so good names
+
+thisisreallyreallylong <- read.csv("./data/species_coordinates.csv") 
+
+h_a_r_d_t_o_t_y_p_e <- read.csv("./data/species_coordinates.csv") 
+
+.naming <- read.csv("./data/species_coordinates.csv") 
+
+```
+
+## ACTIVITY: Reformat your code (3 min)
+
+1. Highlight all of your code that you want to reformat
+2. Use the "reformat code" command in RStudio (see the RStudio help)
 
 
 
-## ACTIVITY: Ecological data project (10 min)
+## Data wrangling (10 min)
 
-Setup a new project and outline a script that will: 
+A general data structure is two dimensional with individual
+observations in rows and attributes of each observation in columns.
 
-1. Import data
-2. Do some data management
-3. Do some analyses
-4. Make a plot
+I highly recommend that if you use this structure, and not a database,
+to save your data as a Comma Separated Value (CSV) format. This is a
+simple, non-proprietary format that you can choose as an exported or
+"save-as" option in most spreadsheet programs.
+
+Because we can do calcualtions and statistics in **R**, there isn't a
+need for the book keeping features that spreadsheet programs, such as
+Excel and Open-Office, were written to do. We can therefore just use
+the spreadsheets to create our CSV files and do the rest in **R**. 
+
+The following are some basic concepts to know that are useful for data
+wrangling in **R**.
+
+*Working Director*
+
+- *getwd* tells you the path for your current working directory
+- *setwd* sets your working directory to the path that you give it
+- *dir* lists the files in your working directory or specified path
+
+*Relative Paths*
+
+- "./" current directory
+- "../" previous directory
+- "../../../../../../../../../" probably not acutally a directory
+- "~/" the "home" directory
+- "/" the "root" directory
+
+*File I/O*
+
+- *read.* reads in a file to an object
+- *write.* writes out an object to a file
+
+*Objects and Assignments*
+
+- "<-" creates an object on the left from some input on the right
+- "->" creates an object on the right from some input on the left
+- "=" creates an object in whatever direction makes sense (AVOID USING THIS)
+- *assign* creates an object given a name and input (ADVANCED)
+- "-->" and "<--" used to create objects in different environments (SUPER ADVANCED)
+- *ls* tells you the objects that **R** has in memory
+- *rm* will remove the objets that in memory
 
 
+```{r, eval = FALSE}
 
-## Data wrangling (15 min)
+## Quick way to clear your global environment
 
-File I/O = read.* and write.*
+rm(list = ls())
 
-Working directories and relative paths = getwd, setwd, "./../../"
+```
 
-Objects and assignments = x <- 10 (=, ->, assign)
+*Data Mode*: Modes are the kind of data. This determines what can be done with
+the data themselves. 
 
-Mode = Scalars, vectors, matrices, arrays, lists, data.frames
+- numeric data are numbers
+- character data are characters
+- logical data are TRUE or FALSE
+- factor data have complex definitions with properties such as order
+- *mode*
+- *is.* checks if an object is a specific mode
+- *as.* coerces an object to a specific mode
+- *length* the number of values in a vector
+- *dim* dimensionality of an n-dimenisional object
+- *summary* summarizes aspects of an object
 
-Class = numeric, character, factor, logical, etc. 
+*Data Class*: Classes are specific ways that the data are organized. This determines
+how the information can be indexed.
 
-Indexing = x[1], x[1,1], x[[1]], 
+- "Scalars" are single values. This isn't an acutal class in **R**.
+- Vectors have one dimension, i.e. they're a collection of scalars.
+- Matrices have two dimensions, i.e. they're a collection of vectors.
+- Arrays have n-dimensions, but everything is the same mode.
+- Lists can be "ragged" and comprised of different modes. 
+- Data Frames (often the DEFAULT) are lists that function like
+  matrices but the columns can be different modes. 
+- *class* tells you the class of an object
 
-Sorting = sort(x), order(x)
+*Sorting and Matching* 
+
+- *sort* will produce a re-ordered vector based on numeric or
+  alphabetical sorting rules. 
+- *order* will produce a vector of the ordering of a vector.
+- *match* produces the indices for matches between two vectors.
+- *%in%* will tell you which values of a given vector are in another. 
+
+**WARNING!** Many sorting and matching functions will work on other
+data types; however, make sure that you pay attention to what they are
+actually doing!
+
+*Indexing* 
+
+This is how we can refer to specific values inside of objects.
+
+```{r, eval = TRUE}
+
+# This is a scalar, which R will treat as a vector
+
+1 
+x <- 1
+is.vector(x)
+
+# Creating a vector and indexing the first value
+
+vec <- 1:10
+vec[1]
+
+# Indexing everything in the vector EXCEPT the first value
+vec[-1]
+
+# Creating a matrix and indexing the first row, first column
+
+mat <- matrix(1:10, nrow = 5, ncol = 2)
+mat[1,1]
+
+# Creating a data frame and indexing the first column
+
+df <- data.frame(x = 3:10, y = letters[3:10])
+
+# These are all different ways to index the first column ("x")
+
+df[, 1] # By the number of the column
+df[, "x"] # By name of a column
+df[, x] # Also, by name of a column, without quoting
+df[[x]]
+
+# These are all different ways to index the first row
+
+df[1, ] # By the number of the row
+
+# Indexing rows by names can also be done, as long as the rows have names assigned to them
+
+rownames(df)
+df["1", ]
+
+```
 
 ## Activity: Wrangle those data! (10 min)
 
+1. Start a new script called "iris.R"
+2. Load the dataset "iris" using *data(iris)*
+3. Then do the following wranglings:
+
+```{r, eval = FALSE}
+
+data(iris)
+
+# Take a second to explore the data set
+
+# The first "Sepal Length" value is wrong. Fix it so that it is 51.5.
+
+# Turns out, the actual sepal widths are off by a factor of two
+# Fix it so that the widths are twice the initial values
+
+
+# Somone forget to enter the stem data. 
+# Luckily we know that the stems scale allometrically as
+# Twice the sepal length plus the square of the petal length
+# Calculate the stem length and add a new column called "Stem.Length"
+
+```
+
+## 
+## 
+## 
+## Wait for it...
+## 
+## 
+## 
+
+```{r, eval = FALSE}
+
+data(iris)
+
+# Take a second to explore the data set
+str(iris)
+summary(iris)
+colnames(iris)
+
+# The first "Sepal.Length" value is wrong. Fix it so that it is 51.5.
+iris[1, "Sepal.Length"] <- 51.5
+
+# Turns out, the actual sepal widths are off by a factor of two
+# Fix it so that the widths are twice the initial values
+iris[, "Sepal.Width"] <- iris[, "Sepal.Width"] * 2
+
+# Somone forget to enter the stem data. 
+# Luckily we know that the stems scale allometrically as
+# Twice the sepal length plus the square of the petal length
+# Calculate the stem length and add a new column called "Stem.Length"
+Stem.Length <- iris[, "Sepal.Length"] * 2 + iris[, "Petal.Length"]^2
+iris <- data.frame(iris, Stem.Length)
+
+```
 
 ## Yo, Matt, it's time to take a break! (10 min)
 
 <!-- 60 min -->
 
-## Style: Best Practices and Intro to Packages (5 min)
+## Activity: Wrangling some real data (10 min)
 
-Hadley Whickam's guide to style http://adv-r.had.co.nz/Style.html
+**Citizen Science - Firefly Watch**
 
-Re-format code in *RStudio* with:
+https://www.massaudubon.org/get-involved/citizen-science/firefly-watch
 
-1. Code -> Reformat Code
+1. Import the data using 
+2. Explore them using *head*, *tail*, *str* and *summary*
+3. Make a plot of two of the variables in the dataset
 
-## Data testing (10 min)
+## Data testing (5 min)
 
-Conditional operations
-Conditional statements
-Logical type
+Conditional statements and operations allow us to check if an
+expectation is true or not. This is a crucial 
 
 ```{r, eval = FALSE}
-if (!(is.numeric(x[,1]))){warning("Danger Will Robinson!")}else{}
+
+if (is.numeric(x[,1]) == FALSE){
+    warning("Danger Will Robinson!")
+}else{
+    print("Everything's cool...")
+}
 
 ```
 
 ## Activity: Write your own test! (10 min)
 
-
-
-## Review and Q/A (10 min)
-
-1. Project organization
-2. Ecological data
-3. Data testing 
+Check that the firefly data are imported correclty
 
 
 ## Further Study:
 
+- Style guide = http://r-pkgs.had.co.nz/style.html
 - *dplyr* = reorganize data
 - *stringr* manipulate text (aka. "strings")
 - *lubridate* for handling dates and times
 - *sp* and *raster* for spatial datasets
 - *purrr* "apply" functions = functions for repeating functions
+
+## Review and Q/A (10 min)
+
+1. Project organization
+2. Data wrangling
+3. Data testing 
 
 
 # Day 3
