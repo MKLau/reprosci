@@ -1,7 +1,7 @@
 ---
-title: Reproducible Science with R (Day 1)
+title: Reproducible Science with R
 author: M.K. Lau
-output: tufte_handout
+output: tufte_html
 
 ---
 
@@ -392,7 +392,7 @@ project from *RStudio* and set up a file system with:
 
 ## Activity: Operations (5 min)
 
-Start a new script and write some code that creates two objects "a"
+In the command-line write some code that creates two objects "a"
 equal to 2, "b" also equal to "2" and then create a third object "c"
 that is equal to the product of "a" and "b". Then, find the
 square-root of "c".
