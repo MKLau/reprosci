@@ -819,10 +819,12 @@ iris &lt;- data.frame(iris, Stem.Length)</code></pre>
 <div id="activity-wrangling-some-real-data-10-min" class="section level2">
 <h2>Activity: Wrangling some real data (10 min)</h2>
 <p><strong>Citizen Science - Firefly Watch</strong></p>
-<p><a href="https://www.massaudubon.org/get-involved/citizen-science/firefly-watch" class="uri">https://www.massaudubon.org/get-involved/citizen-science/firefly-watch</a></p>
 <p>Dr. Sara Lewis at Tufts University</p>
+<p><a href="https://www.massaudubon.org/get-involved/citizen-science/firefly-watch" class="uri">https://www.massaudubon.org/get-involved/citizen-science/firefly-watch</a></p>
 <ol style="list-style-type: decimal">
-<li>Import the data using</li>
+<li>Download the firefly data from <a href="https://github.com/MKLau/reprosci/blob/master/data/FFW_Data_2016.csv" class="uri">https://github.com/MKLau/reprosci/blob/master/data/FFW_Data_2016.csv</a></li>
+<li>In the repro_example project, create a new script called “firefly.R”</li>
+<li>Import the data into the script</li>
 <li>Explore them using <em>head</em>, <em>tail</em>, <em>str</em> and <em>summary</em></li>
 <li>Make a plot of two of the variables and save the plot to <em>results</em></li>
 </ol>
@@ -841,8 +843,16 @@ iris &lt;- data.frame(iris, Stem.Length)</code></pre>
 <p>Write a test to (at least partly) check that the firefly data are imported correctly.</p>
 <p>What are your assumptions about the data?</p>
 </div>
-<div id="further-study" class="section level2">
-<h2>Further Study:</h2>
+<div id="review-and-qa-5-min" class="section level2">
+<h2>Review and Q/A (5 min)</h2>
+<ol style="list-style-type: decimal">
+<li>Project organization</li>
+<li>Data wrangling</li>
+<li>Data testing</li>
+</ol>
+</div>
+<div id="advanced-study" class="section level2">
+<h2>Advanced Study:</h2>
 <ul>
 <li>Style guide = <a href="http://r-pkgs.had.co.nz/style.html" class="uri">http://r-pkgs.had.co.nz/style.html</a></li>
 <li><em>dplyr</em> = reorganize data</li>
@@ -851,14 +861,6 @@ iris &lt;- data.frame(iris, Stem.Length)</code></pre>
 <li><em>sp</em> and <em>raster</em> for spatial datasets</li>
 <li><em>purrr</em> “apply” functions = functions for repeating functions</li>
 </ul>
-</div>
-<div id="review-and-qa-5-min" class="section level2">
-<h2>Review and Q/A (5 min)</h2>
-<ol style="list-style-type: decimal">
-<li>Project organization</li>
-<li>Data wrangling</li>
-<li>Data testing</li>
-</ol>
 </div>
 </div>
 <div id="day-3" class="section level1">
@@ -949,11 +951,10 @@ iris &lt;- data.frame(iris, Stem.Length)</code></pre>
 ## [1] tufte_0.3
 ## 
 ## loaded via a namespace (and not attached):
-##  [1] Rcpp_0.12.12    digest_0.6.15   rprojroot_1.2   backports_1.1.0
-##  [5] formatR_1.5     magrittr_1.5    evaluate_0.10.1 stringi_1.1.6  
-##  [9] rmarkdown_1.9   tools_3.4.4     stringr_1.3.0   tinytex_0.5    
-## [13] xfun_0.1        yaml_2.1.17     compiler_3.4.4  htmltools_0.3.6
-## [17] knitr_1.20</code></pre>
+##  [1] compiler_3.4.4  backports_1.1.0 magrittr_1.5    rprojroot_1.2  
+##  [5] tools_3.4.4     htmltools_0.3.6 yaml_2.1.17     Rcpp_0.12.12   
+##  [9] stringi_1.1.6   rmarkdown_1.9   knitr_1.20      stringr_1.3.0  
+## [13] digest_0.6.15   evaluate_0.10.1</code></pre>
 <p>A good place for this information is in your README.</p>
 </div>
 <div id="packrat-10-min" class="section level2">

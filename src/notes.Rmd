@@ -696,13 +696,15 @@ iris <- data.frame(iris, Stem.Length)
 
 **Citizen Science - Firefly Watch**
 
-https://www.massaudubon.org/get-involved/citizen-science/firefly-watch
-
 Dr. Sara Lewis at Tufts University
 
-1. Import the data using 
-2. Explore them using *head*, *tail*, *str* and *summary*
-3. Make a plot of two of the variables and save the plot to *results*
+https://www.massaudubon.org/get-involved/citizen-science/firefly-watch
+
+1. Download the firefly data from https://github.com/MKLau/reprosci/blob/master/data/FFW_Data_2016.csv
+2. In the repro_example project, create a new script called "firefly.R"
+3. Import the data into the script
+4. Explore them using *head*, *tail*, *str* and *summary*
+5. Make a plot of two of the variables and save the plot to *results*
 
 ## Data testing and Conditionals (5 min)
 
@@ -725,14 +727,6 @@ Write a test to (at least partly) check that the firefly data are imported corre
 
 What are your assumptions about the data?
 
-## Further Study:
-
-- Style guide = http://r-pkgs.had.co.nz/style.html
-- *dplyr* = reorganize data
-- *stringr* manipulate text (aka. "strings")
-- *lubridate* for handling dates and times
-- *sp* and *raster* for spatial datasets
-- *purrr* "apply" functions = functions for repeating functions
 
 ## Review and Q/A (5 min)
 
@@ -740,6 +734,14 @@ What are your assumptions about the data?
 2. Data wrangling
 3. Data testing 
 
+## Advanced Study:
+
+- Style guide = http://r-pkgs.had.co.nz/style.html
+- *dplyr* = reorganize data
+- *stringr* manipulate text (aka. "strings")
+- *lubridate* for handling dates and times
+- *sp* and *raster* for spatial datasets
+- *purrr* "apply" functions = functions for repeating functions
 
 # Day 3
 
