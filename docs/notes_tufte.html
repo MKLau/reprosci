@@ -883,8 +883,8 @@ iris &lt;- data.frame(iris, Stem.Length)</code></pre>
 </ol>
 <p><strong>Make sure that your working directory is set correctly</strong></p>
 </div>
-<div id="get-versioning-with-git-5-min" class="section level2">
-<h2>Get versioning with git (5 min)</h2>
+<div id="get-versioning-with-git-10-min" class="section level2">
+<h2>Get versioning with git (10 min)</h2>
 <p>Git just tracks changes made to files. This is an extremely efficient way to keep a record of what has been done to a project. It was designed for writing software, but it will work with many file types. It works best with text files.</p>
 <p>Here are the basic terms to know:</p>
 <ul>
@@ -918,23 +918,9 @@ iris &lt;- data.frame(iris, Stem.Length)</code></pre>
 <h2>Data wrangling review from Day 2 (10 min)</h2>
 <p>We’re going to cover some more info on how to work with data.</p>
 </div>
-<div id="activity-make-two-vectors-each-of-length-5-and-combine-them-into" class="section level2">
-<h2>Activity: Make two vectors (each of length 5) and combine them into</h2>
-<p>a data frame (10 min)</p>
+<div id="activity-make-two-vectors-each-of-length-5-and-combine-into-a-data-frame-10-min" class="section level2">
+<h2>Activity: Make two vectors (each of length 5) and combine into a data frame (10 min)</h2>
 <p>Play with your data. Try indexing, sorting and moving the data around into different objects.</p>
-</div>
-<div id="data-testing-and-conditionals-5-min" class="section level2">
-<h2>Data testing and Conditionals (5 min)</h2>
-<p>Conditional statements and operations allow us to check if an expectation is true or not. This is a crucial</p>
-<pre class="r"><code>if (is.numeric(x[,1]) == FALSE){
-    warning(&quot;Danger Will Robinson!&quot;)
-}else{
-    print(&quot;Everything's cool...&quot;)
-}</code></pre>
-</div>
-<div id="activity-write-your-own-test-5-min" class="section level2">
-<h2>Activity: Write your own test! (5 min)</h2>
-<p>Think of an assumption you would have about the data and write a test to (at least partly) check that the firefly data are imported correctly.</p>
 <!-- 60 min -->
 </div>
 </div>
@@ -963,12 +949,12 @@ iris &lt;- data.frame(iris, Stem.Length)</code></pre>
 <div id="day-n-3" class="section level1">
 <h1>Day (n + 3)</h1>
 <ol style="list-style-type: decimal">
-<li><em>packrat</em>, <em>Rmarkdown</em> and github</li>
+<li><em>packrat</em>, <em>Rmarkdown</em>, github and data testing</li>
 <li>Possible: Advanced Topics Discussions (see <em>Advanced Topics</em>)</li>
 </ol>
 <ul>
 <li>1-hour sessions</li>
-<li>Zoom + Slack</li>
+<li>Zoom</li>
 <li>Museum or remote locations</li>
 </ul>
 <div id="software-dependencies-r-packages-and-cran-et-al." class="section level2">
@@ -998,10 +984,11 @@ iris &lt;- data.frame(iris, Stem.Length)</code></pre>
 ## [1] tufte_0.3
 ## 
 ## loaded via a namespace (and not attached):
-##  [1] compiler_3.4.4  backports_1.1.0 magrittr_1.5    rprojroot_1.2  
-##  [5] formatR_1.5     tools_3.4.4     htmltools_0.3.6 yaml_2.1.17    
-##  [9] tinytex_0.5     Rcpp_0.12.12    stringi_1.1.6   rmarkdown_1.9  
-## [13] knitr_1.20      stringr_1.3.0   digest_0.6.15   evaluate_0.10.1</code></pre>
+##  [1] Rcpp_0.12.12    digest_0.6.15   rprojroot_1.2   backports_1.1.0
+##  [5] formatR_1.5     magrittr_1.5    evaluate_0.10.1 stringi_1.1.6  
+##  [9] rmarkdown_1.9   tools_3.4.4     stringr_1.3.0   tinytex_0.5    
+## [13] xfun_0.1        yaml_2.1.17     compiler_3.4.4  htmltools_0.3.6
+## [17] knitr_1.20</code></pre>
 <p>A good place for this information is in your README.</p>
 </div>
 <div id="packrat" class="section level2">
@@ -1022,6 +1009,19 @@ iris &lt;- data.frame(iris, Stem.Length)</code></pre>
 <p>Markdown is a language use for “typesetting”, like the HTML that makes up webpages. There is also a specific syntax that can be used to combin Markdown with the R language. This allows the creation of documents that combine text, code and output. This is an extremely useful tool for the scientific reproduciblity kit. One particular aspect that is extremely powerful is the ability to automatically create many different “rendered” documents from a single document, such as webpages, PDFs, Shiny Apps and many more formats.</p>
 <p>For more information, the following is a useful introduction to R Markdown notebooks.</p>
 <p><a href="https://rmarkdown.rstudio.com/r_notebooks.html" class="uri">https://rmarkdown.rstudio.com/r_notebooks.html</a></p>
+</div>
+<div id="data-testing-and-conditionals-5-min" class="section level2">
+<h2>Data testing and conditionals (5 min)</h2>
+<p>Conditional statements and operations allow us to check if an expectation is true or not. This is a crucial</p>
+<pre class="r"><code>if (is.numeric(x[,1]) == FALSE){
+    warning(&quot;Danger Will Robinson!&quot;)
+}else{
+    print(&quot;Everything's cool...&quot;)
+}</code></pre>
+</div>
+<div id="activity-write-your-own-test-5-min" class="section level2">
+<h2>Activity: Write your own test! (5 min)</h2>
+<p>Think of an assumption you would have about the data and write a test to (at least partly) check that the firefly data are imported correctly.</p>
 </div>
 </div>
 <div id="advanced-topics" class="section level1">

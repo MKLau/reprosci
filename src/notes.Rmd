@@ -759,11 +759,10 @@ https://www.massaudubon.org/get-involved/citizen-science/firefly-watch
 6. Import the data
 7. Explore them using *head*, *tail*
 8. *str* and *summary*
-9. Make a plot of two of the variables and save the plot to *results*
 
 **Make sure that your working directory is set correctly**
 
-## Get versioning with git (5 min)
+## Get versioning with git (10 min)
 
 Git just tracks changes made to files. This is an extremely efficient
 way to keep a record of what has been done to a project. It was
@@ -795,68 +794,47 @@ Examples:
 2. Select the files that you wish to add to the stage
 3. Click commit
 
+# Break for ten minutes 
+
 ## Data wrangling review from Day 2 (10 min)
 
 We're going to cover some more info on how to work with data.
 
-## Activity: Make two vectors (each of length 5) and combine them into
-   a data frame (10 min)
+<!-- 60 min -->
+
+
+## Activity: Play with the firefly data (10 min)
+
+- Try subsetting and sorting the data
+- Recombine the data into new variables
+- Make some plots to explore the data
+
+## Feeling like you're struggling with wrangling? Try this activity.
+## Activity: Make two vectors (each of length 5) and combine into a data frame (10 min)
 
 Play with your data. Try indexing, sorting and moving the data around
 into different objects.
 
-## Data testing and Conditionals (5 min)
-
-Conditional statements and operations allow us to check if an
-expectation is true or not. This is a crucial 
-
-```{r, eval = FALSE}
-
-if (is.numeric(x[,1]) == FALSE){
-    warning("Danger Will Robinson!")
-}else{
-    print("Everything's cool...")
-}
-
-```
-
-## Activity: Write your own test! (5 min)
-
-Think of an assumption you would have about the data and write a test
-to (at least partly) check that the firefly data are imported
-correctly.
-
-
-<!-- 60 min -->
-
-# Break for ten minutes 
-
-
-
-## Activity: Wanna go back in time! (10 min)
-
-Rolling back versions
-
-1. View history
-2. Choose the time point (here's where commit messages are key!)
-3. Revert
 
 ## Wrap-up on Reproducibility with **R** (5 min)
 
 1. Max(reproducible) = data * software * docs
 2. Project architecture for better access
 3. Document (comment, follow style, "Brevity is the soul of wit.")
-4. Share your results
-5. Planned obsolescence: Backup and version
+4. Planned obsolescence: Backup and version
+5. Share your results, code and data
 
-# Day (n + 3)
+## Post-workshop Sessions
 
-1. *packrat*, *Rmarkdown* and github
+1. *packrat*, *Rmarkdown*, github and data testing
 2. Possible: Advanced Topics Discussions (see *Advanced Topics*)
 
-- 1-hour sessions
-- Zoom + Slack
+- 1-hour sessions for 5 or more REUs
+- Zoom
 - Museum or remote locations
+
+
+# Day (n + 3)
 
 
 ## Software Dependencies: R Packages and CRAN *et al.* 
@@ -930,6 +908,28 @@ For more information, the following is a useful introduction to R
 Markdown notebooks.
 
 https://rmarkdown.rstudio.com/r_notebooks.html
+
+
+## Data testing and conditionals (5 min)
+
+Conditional statements and operations allow us to check if an
+expectation is true or not. This is a crucial 
+
+```{r, eval = FALSE}
+
+if (is.numeric(x[,1]) == FALSE){
+    warning("Danger Will Robinson!")
+}else{
+    print("Everything's cool...")
+}
+
+```
+
+## Activity: Write your own test! (5 min)
+
+Think of an assumption you would have about the data and write a test
+to (at least partly) check that the firefly data are imported
+correctly.
 
 
 # Advanced Topics
