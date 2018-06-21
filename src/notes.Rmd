@@ -5,7 +5,6 @@ output: tufte_html
 
 ---
 
-
 ```{r, echo = FALSE, results = "hide", eval = FALSE}
 ## https://rmarkdown.rstudio.com/lesson-9.html
 library(tufte)
@@ -18,12 +17,37 @@ rmarkdown::render("notes.Rmd", output_format = "beamer_presentation", output_fil
 
 ```
 
+# Why make your work reproducible and how can coding help?
 
+Science is driven by the exchange of information and
+knowledge. Currently, there is a lot that we can do to make research
+more transparent and useful. A recent study (Stodden *et al.* 2018)
+demonstrated that only 26% of studies published in *Science* could be
+reproduced. This was even more striking given that the study was
+conducted after the *Science* had instituted it's open data policy.
+
+What this and other studies point to is the need to provide well
+documented data as well as the software that were needed to conduct
+the study. Luckily, advances in open-source computer languages, such
+as **R** and **python**, provide a way to produce computations that
+can more easily document scientific research in a transparent, easily
+shared way.
+
+In this course, we will cover how to conduct **reproducible**
+scientific research using the **R** programming language and
+supporting software that will enable researchers to more clearly and
+easily document projects. Participants will gain experience coding in
+**R** using the *RStudio* IDE and the *git* version control system.
+
+- Day 1: Motiviation and framework for scientific reproducibility and
+  the basics of using **R** in *RStudio*
+- Day 2: Scientific scripts and best practics for code and projects
+- Day 3: Tools for keeping track of versions and code dependencies
 
 - **Total Class Time: 4.5 hours**
 - **Goals: Use R and other tools to conduct reproducible research.**
 
-![Wordcloud of pre-class survey comments.](../docs/cloud_2018.png)
+![](../docs/cloud_2018.png)
 
 This is a diagram exploring the comments made by workshop participants
 regarding what they hope to gain from the course. A few things that
@@ -37,12 +61,6 @@ folks to learn and implement new stats methods on their own.
 there will be a wide range of abilities in this class, everyone can
 look at this as an opportunity to learn something.
 
-# Overview
-
-- Day 1: Motiviation and framework for scientific reproducibility and
-  the basics of using **R** in *RStudio*
-- Day 2: Scientific scripts and best practics for code and projects
-- Day 3: Tools for keeping track of versions and code dependencies
 
 ## Being a good code community member (5 min)
 
@@ -66,68 +84,7 @@ https://adainitiative.org/
 
 # Day 1
 
-## Overview: Why make your work reproducible and why R? (15 min)
-
-Science is driven by the exchange of information and
-knowledge. Currently, there is a lot that we can do to make research
-more transparent and useful. A recent study (Stodden *et al.* 2018)
-demonstrated that only 26% of studies published in *Science* could be
-reproduced. This was even more striking given that the study was
-conducted after the *Science* had instituted it's open data policy.
-
-What this and other studies point to is the need to provide well
-documented data as well as the software that were needed to conduct
-the study. Luckily, advances in open-source computer languages, such
-as **R** and **python**, provide a way to produce computations that
-can more easily document scientific research in a transparent, easily
-shared way.
-
-In this course, we will cover how to conduct **reproducible**
-scientific research using the **R** programming language and
-supporting software that will enable researchers to more clearly and
-easily document projects. Participants will gain experience coding in
-**R** using the *RStudio* IDE and the *git* version control system.
-
-Possible additional topics, if time and interest allows:
-
-- *RMarkdown* 
-- *dplyr*
-- *ggplot*
-- *github*
-- *Shiny Apps*
-- *R packages*
-- *Continuous Integration (e.g. Travis)*
-- *Posting data to web archives (e.g. Figshare)*
-- *Open Licensing*
-- *Code performance with profVis*
-- *Data Provenance in R* 
-- *Code cleaning with Rclean*
-
-<!-- Philosophy: Reproducibility & Benefaction -->
-<!-- Science 44% w/ artefacts, 24% reproducible -->
-<!-- FAIR -->
-<!-- Experiment – Design and Observation -->
-<!-- Data – Digitizing and Storage -->
-<!-- Data – Wrangling (IO, assign, object, index, type, paths) -->
-<!-- Check & Test (conditionals) -->
-<!-- Computation – Analysis, Modeling, etc. -->
-<!-- Results -->
-<!-- Plotting -->
-<!-- Best Practices -->
-<!-- Notebooks (data + code + annotation) -->
-<!-- Style (formatR) -->
-<!-- Data and code = Open Access -->
-<!-- Github, Dataverse, Figshare, Dryad, EDI, NCBI -->
-<!-- Preservation -->
-<!-- Capsules (ReproZip) -->
-<!-- VMs (system independence) -->
-<!-- Provenance (provR) -->
-<!-- Code cleaning (cleanR) -->
-<!-- Continuous integration (Travis) -->
-<!-- Engagement (Websites, Blogs, Twitter, etc.) -->
-<!-- Life-long learning – ROpenSci, stackoverflow, Tidyverse -->
-
-# Reproducibility Framework (10 min)
+## Reproducibility Framework (10 min)
 
 **Max(reproducibility) = Data * Software * Documentation**
 
@@ -179,6 +136,31 @@ enter code (where the cursor is) and the code that you have already
 run (above where the cursor is). This is a handy place to conduct
 tasks that you don't want to keep for later usage.
 
+## Activity: Operations (5 min)
+
+Here's a bit of R.
+
+In the command-line write some code that creates two objects "a"
+equal to 2, "b" also equal to "2" and then create a third object "c"
+that is equal to the product of "a" and "b". Then, find the
+square-root of "c".
+
+## Operations
+
+**R** has many mathematical operations, including
+
+```{r, echo = TRUE, eval = FALSE}
+
+2 + 2   # addition
+2 - 2   # substraction
+2 * 2   # multiplication
+2 / 2   # division
+2^2     # powers
+2 %*% 2 # matrix multiplication
+print("And more!")
+
+```
+
 ## Script(s)
 
 Scripts are text files whose syntax follows the specifications of a
@@ -229,9 +211,13 @@ lot easier in many ways, but the main one is that it allows **R** to
 make assumptions about the files that you're referring to in your
 code.
 
-# It's time to take a break! (10 min)
+# 
+
+![](../docs/yourmomentofzen.png)
 
 <!-- 60 min -->
+
+
 
 ## Anatomy of an R Script (10 min)
 
@@ -388,30 +374,12 @@ project from *RStudio* and set up a file system with:
 - **src**: where all of the **R** scripts should be kept
 - **results**: this is where output from scripts can go
 - **docs**: further documentation and relevant files (e.g. notes, papers)
-- **bin**: ADVANCED - if you need to include other associated software
+- **bin**: ADVANCED - if you need to include other associated
+  software, such as compiled (binary) code
 
-## Activity: Operations (5 min)
+This file structure gives a consistent file framework for organizing
+almost any project. One major benefit of this is that we 
 
-In the command-line write some code that creates two objects "a"
-equal to 2, "b" also equal to "2" and then create a third object "c"
-that is equal to the product of "a" and "b". Then, find the
-square-root of "c".
-
-## Operations
-
-**R** has many mathematical operations, including
-
-```{r, echo = TRUE, eval = FALSE}
-
-2 + 2   # addition
-2 - 2   # substraction
-2 * 2   # multiplication
-2 / 2   # division
-2^2     # powers
-2 %*% 2 # matrix multiplication
-print("And more!")
-
-```
 
 ## More on Plotting (5 min)
 
@@ -559,8 +527,8 @@ the data themselves.
 - *dim* dimensionality of an n-dimenisional object
 - *summary* summarizes aspects of an object
 
-*Data Class*: Classes are specific ways that the data are organized. This determines
-how the information can be indexed.
+*Data Class*: Classes are specific ways that the data are
+organized. This determines how the information can be indexed.
 
 - "Scalars" are single values. This isn't an acutal class in **R**.
 - Vectors have one dimension, i.e. they're a collection of scalars.
@@ -571,8 +539,30 @@ how the information can be indexed.
   matrices but the columns can be different modes. 
 - *class* tells you the class of an object
 
-*Sorting and Matching* 
 
+## Review and Q/A (5 min)
+
+1. Project organization
+2. Data wrangling
+
+
+# Day 3
+
+<!--           -->
+<!-- **Day 3** -->
+<!--           -->
+
+## Reproducibility Mantra (5 min)
+
+![General scientific project pipeline.](../docs/project_pipeline.png)
+
+**Max(reproducibility) = Documentation * Data * Software**
+
+
+## Indexing, Sorting and Matching
+
+- *[]* the brackets are **R**'s way to refer to parts of data
+  objects. 
 - *sort* will produce a re-ordered vector based on numeric or
   alphabetical sorting rules. 
 - *order* will produce a vector of the ordering of a vector.
@@ -583,32 +573,71 @@ how the information can be indexed.
 data types; however, make sure that you pay attention to what they are
 actually doing!
 
-*Indexing* 
-
-This is how we can refer to specific values inside of objects.
+## Activity: Explore data modes, object class and indexing
 
 ```{r, eval = TRUE}
 
-# This is a scalar, which R will treat as a vector
+## This is a scalar, though R will treat it as a vector
 
 1 
 x <- 1
 is.vector(x)
 
-# Creating a vector and indexing the first value
+## A quick way to create an integer vector
 
 vec <- 1:10
 vec[1]
 
-# Indexing everything in the vector EXCEPT the first value
+## Another way to create the same vector via concatenation
+
+vec <- c(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+vec[1]
+
+## Indexing everything in the vector EXCEPT the first value
 vec[-1]
 
-# Creating a matrix and indexing the first row, first column
+## Indexing the first 2 values three different ways
 
-mat <- matrix(1:10, nrow = 5, ncol = 2)
+vec[1]
+vec[2]
+vec[c(1, 2)]
+vec[1:2]
+
+## Creating a matrix and indexing the first row, first column
+
+mat <- matrix(1:27, nrow = 9, ncol = 3)
+
+
+## We index matrices similarly to vectors, but now we 
+## have two dimensions
+
 mat[1,1]
 
-# Creating a data frame and indexing the first column
+## R assumes that you want all the data in an object
+## unless you tell it otherwise
+
+mat
+
+## So, we can access everything in the first row 
+
+mat[1, ]
+
+## Or, everything in the first column
+
+mat[, 1]
+
+## Or, multiple columns
+
+mat[, 1:3]
+
+
+```
+
+## Activity: lists and data frames (10 min)
+
+
+```{r }
+## Creating a data frame and indexing the first column
 
 df <- data.frame(x = 3:10, y = letters[3:10])
 
@@ -627,6 +656,18 @@ df[1, ] # By the number of the row
 
 rownames(df)
 df["1", ]
+
+```
+
+## Changing values in objects (1 min)
+
+This is s
+
+```{r , eval = FALSE}
+
+df[1, 1] <- 10
+df[, 1:3] <- 10:12
+df[, "x"] <- new.x
 
 ```
 
@@ -688,9 +729,10 @@ iris <- data.frame(iris, Stem.Length)
 
 ```
 
-## Yo, Matt, it's time to take a break! (10 min)
+## 
 
-<!-- 60 min -->
+![](../docs/yourmomentofzen.png)
+
 
 ## Activity: Wrangling some real data (10 min)
 
@@ -727,34 +769,15 @@ Write a test to (at least partly) check that the firefly data are imported corre
 
 What are your assumptions about the data?
 
+## 
 
-## Review and Q/A (5 min)
+![](../docs/firefly.jpg)
 
-1. Project organization
-2. Data wrangling
-3. Data testing 
-
-## Advanced Study:
-
-- Style guide = http://r-pkgs.had.co.nz/style.html
-- *dplyr* = reorganize data
-- *stringr* manipulate text (aka. "strings")
-- *lubridate* for handling dates and times
-- *sp* and *raster* for spatial datasets
-- *purrr* "apply" functions = functions for repeating functions
-
-# Day 3
-
-<!--           -->
-<!-- **Day 3** -->
-<!--           -->
-
+<!-- 60 min -->
 
 ## "Backing Up" Version Control (10 min)
 
-**Max(reproducibility) = Data * Software * Documentation**
-
-In this module, you'll learn how to use the version control system,
+In this section, you'll learn how to use the version control system,
 known as git, from RStudio. We will cover the basic topics of how to:
 
 1. Initiate a project "repository"
@@ -802,10 +825,6 @@ Rolling back versions
 1. View history
 2. Choose the time point (here's where commit messages are key!)
 3. Revert
-
-## Yo, Matt, it's time to take a break!
-
-<!-- 60 min -->
 
 ## Software Dependencies: R Packages and CRAN *et al.* (5 min)
 
@@ -871,29 +890,6 @@ when you just want to use one or a few functions.
 4. Share your results
 5. Planned obsolescence: Backup and version
 
-
-## Possible: Advanced Topics Courses (5 min)
-
-1-hour sessions
-
-Zoom + Slack
-
-Museum or remote locations
-
-- Scientific notebooks with *rmarkdown* or *jupyter*
-- Advanced command line BASH
-- Advanced git and github
-- Web apps with *shiny*
-- Advanced plotting with *ggplot*
-- Community analysis with *vegan* and *ecodist*
-- Matrix operations and linear algebra **%*%**
-- Efficiency with *profVis*
-- Network analysis with *enaR*
-- Mapping with *googlevis*
-- Spatial data analysis with *sp* and *raster*
-- Automated workflow tracking with data provenance *RDatatracker*
-- Code cleaning with *Rclean*
-
 ## R Markdown Notebooks
 
 Markdown is a language use for "typesetting", like the HTML that makes
@@ -910,4 +906,44 @@ Markdown notebooks.
 
 https://rmarkdown.rstudio.com/r_notebooks.html
 
-## Survey (5-10 min)
+# Day (n + 3)
+
+## Possible: Advanced Topics Discussions (5 min)
+
+- 1-hour sessions
+- Zoom + Slack
+- Museum or remote locations
+
+## Data Wrangling
+
+- *dplyr* = reorganize data
+- *stringr* manipulate text (aka. "strings")
+- *lubridate* for handling dates and times
+- *sp* and *raster* for spatial datasets
+- *purrr* "apply" functions = functions for repeating functions
+
+## Sharing
+
+- *github* = sharing git repositories
+- *RMarkdown* = organized documentation, code and results
+- *Shiny* = creating interactive representations
+
+## Better R
+
+- Efficiency with *profVis*
+- Automated workflow tracking with data provenance *RDatatracker*
+- Code cleaning with *Rclean*
+
+## Advanced Data Science
+
+- BASH
+- Web data archives
+- Open Licensing
+- Continuous integration
+- Virtual Machines
+- Docker
+
+# Survey (5-10 min)
+
+
+
