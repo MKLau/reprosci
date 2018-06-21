@@ -211,9 +211,7 @@ lot easier in many ways, but the main one is that it allows **R** to
 make assumptions about the files that you're referring to in your
 code.
 
-# 
-
-![](../docs/yourmomentofzen.png)
+# Break for ten minutes 
 
 <!-- 60 min -->
 
@@ -723,8 +721,6 @@ iris <- data.frame(iris, Stem.Length)
 
 ## Reproducibility Mantra 
 
-![](../docs/workflow.png)
-
 **Max(reproducibility) = Documentation * Data * Software**
 
 ## "Backing Up" Version Control (5 min)
@@ -745,8 +741,6 @@ educational program webpage: https://education.github.com
 
 
 ## Activity: Working with real data (15 min)
-
-![](../docs/firefly.jpg)
 
 **Citizen Science - Firefly Watch**
 
@@ -835,9 +829,8 @@ correctly.
 
 <!-- 60 min -->
 
-## 
+# Break for ten minutes 
 
-![](../docs/yourmomentofzen.png)
 
 
 ## Activity: Wanna go back in time! (10 min)
