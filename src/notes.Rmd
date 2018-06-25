@@ -112,7 +112,6 @@ To use RStudio, you will need to download and install both of the following:
 1. **R** https://cran.r-project.org/
 2. *RStudio* https://www.rstudio.com/products/rstudio/download/#download/
 
-
 I highly recommend referring to RStudio's *Cheat Sheets*, especially
 for using RStudio and basics of R.
 
@@ -723,21 +722,42 @@ iris <- data.frame(iris, Stem.Length)
 
 **Max(reproducibility) = Documentation * Data * Software**
 
+
 ## "Backing Up" Version Control (5 min)
 
 In this section, you'll learn how to use the version control system,
 known as git, from RStudio. We will cover the basic topics of how to:
 
+*Getting and setting up git for RStudio*
+
+1. Download the version of git appropriate for your system (https://git-scm.com/downloads)
+2. Open the installer and follow the directions
+3. Restart *RStudio*
+4. Go to the *Tools* menu and select *Global Options*
+5. Click on *Git/SVN*
+6. Click *Enable version control interface for RStudio projects*
+7. Click *OK*. As long as you used the DEFAULT options to setup git,
+you shouldn't have to change any of the specifications.
+
+*Using git*
+
+Now, you should be able to use git with your projects. Each time you
+start a new project, you can set it up as a git repository by doing
+the following:
+
 1. Initiate a project "repository"
 2. Create, "add" and "commit" changes
 3. View "diffs" and share a compressed project
 
-We will not cover how to use the online git repository known as
-*github*. Using *github* provides a central server through which
-projects can be shared among collaborators in real-time via a system
-that keeps users from stepping on each other's "digital toes". To
-setup a free, private repository through *github.com*, go to their
-educational program webpage: https://education.github.com
+
+
+Using *github* provides a central server through which projects can be
+shared among collaborators in real-time via a system that keeps users
+from stepping on each other's "digital toes". To setup a free, private
+repository through *github.com*, go to their educational program
+webpage: https://education.github.com. For information on how to use
+git, github and RStudio, check out the tutorial here:
+https://www.r-bloggers.com/rstudio-and-github/. 
 
 
 ## Activity: Working with real data (15 min)
@@ -836,7 +856,6 @@ into different objects.
 
 # Day (n + 3)
 
-
 ## Software Dependencies: R Packages and CRAN *et al.* 
 
 Functions and other information are grouped into packages and hosted
@@ -904,8 +923,7 @@ aspect that is extremely powerful is the ability to automatically
 create many different "rendered" documents from a single document,
 such as webpages, PDFs, Shiny Apps and many more formats.
 
-For more information, the following is a useful introduction to R
-Markdown notebooks.
+For more information, the following is a useful introduction to Rmarkdown notebooks:
 
 https://rmarkdown.rstudio.com/r_notebooks.html
 
