@@ -39,9 +39,9 @@ supporting software that will enable researchers to more clearly and
 easily document projects. Participants will gain experience coding in
 **R** using the *RStudio* IDE and the *git* version control system.
 
-- Day 1: Motiviation and framework for scientific reproducibility and
+- Day 1: Motivation and framework for scientific reproducibility and
   the basics of using **R** in *RStudio*
-- Day 2: Scientific scripts and best practics for code and projects
+- Day 2: Scientific scripts and best practices for code and projects
 - Day 3: Tools for keeping track of versions and code dependencies
 
 - **Total Class Time: 4.5 hours**
@@ -55,7 +55,7 @@ stood out in looking this over:
 
 - People wanted to learn **R** (Kaboom, my mind explodes!)
 - A lot of interest in statistical analysis. Although we won't have
-time to actually cover staistical analyses, this class will enable
+time to actually cover statistical analyses, this class will enable
 folks to learn and implement new stats methods on their own.
 - Everyone had something that they wanted to learn how to do. Although
 there will be a wide range of abilities in this class, everyone can
@@ -75,7 +75,7 @@ Similar to science in general software development is empowered by
 community. Please contribute to this by, in particular:
 
 - *We all get out of this class what we put into it.*
-- *Be considerate and respectiful of each other in speech and actions.*
+- *Be considerate and respectful of each other in speech and actions.*
 - *Contribute a safe and effective learning experience for everyone.*
 
 Also, please take a look at the Ada Initiative webpage for more
@@ -95,8 +95,9 @@ processing steps (**R**)
 3. Keep track of versions of your code (*git*)
 4. Make initial data available (whenever possible, *git*)
 5. Keep track of software dependencies (*packrat*, *git*)
-5. Be organized, succinct in style, coding and documentation (**R**,
+6. Be organized, succinct in style, coding and documentation (**R**,
    *Markdown*, *formatR*)
+
 
 If you're interested in more details on how to conduct reproducible
 research, see the **TEE** (Transparency in Ecology and Evolution)
@@ -151,7 +152,7 @@ square-root of "c".
 ```{r, echo = TRUE, eval = FALSE}
 
 2 + 2   # addition
-2 - 2   # substraction
+2 - 2   # subtraction
 2 * 2   # multiplication
 2 / 2   # division
 2^2     # powers
@@ -292,7 +293,7 @@ help. Here are some useful ways to get help:
 ## Review and Q/A (10 min)
 
 1. Importance of reproducibility
-2. Max(reproduciblity) = data * software * docs
+2. Max(reproducibility) = data * software * docs
 3. RStudio
 4. R language (Arguments, Functions, Scripts)
 5. Getting help
@@ -464,7 +465,7 @@ to save your data as a Comma Separated Value (CSV) format. This is a
 simple, non-proprietary format that you can choose as an exported or
 "save-as" option in most spreadsheet programs.
 
-Because we can do calcualtions and statistics in **R**, there isn't a
+Because we can do calculations and statistics in **R**, there isn't a
 need for the book keeping features that spreadsheet programs, such as
 Excel and Open-Office, were written to do. We can therefore just use
 the spreadsheets to create our CSV files and do the rest in **R**. 
@@ -482,7 +483,7 @@ wrangling in **R**.
 
 - "./" current directory
 - "../" previous directory
-- "../../../../../../../../../" probably not acutally a directory
+- "../../../../../../../../../" probably not actually a directory
 - "~/" the "home" directory
 - "/" the "root" directory
 
@@ -497,9 +498,9 @@ wrangling in **R**.
 - "->" creates an object on the right from some input on the left
 - "=" creates an object in whatever direction makes sense (AVOID USING THIS)
 - *assign* creates an object given a name and input (ADVANCED)
-- "-->" and "<--" used to create objects in different environments (SUPER ADVANCED)
+- "->>" and "<<-" used to create objects in different environments (SUPER ADVANCED)
 - *ls* tells you the objects that **R** has in memory
-- *rm* will remove the objets that in memory
+- *rm* will remove the objects that in memory
 
 
 ```{r, eval = FALSE}
@@ -521,13 +522,13 @@ the data themselves.
 - *is.* checks if an object is a specific mode
 - *as.* coerces an object to a specific mode
 - *length* the number of values in a vector
-- *dim* dimensionality of an n-dimenisional object
+- *dim* dimensionality of an n-dimensional object
 - *summary* summarizes aspects of an object
 
 *Data Class*: Classes are specific ways that the data are
 organized. This determines how the information can be indexed.
 
-- "Scalars" are single values. This isn't an acutal class in **R**.
+- "Scalars" are single values. This isn't an actual class in **R**.
 - Vectors have one dimension, i.e. they're a collection of scalars.
 - Matrices have two dimensions, i.e. they're a collection of vectors.
 - Arrays have n-dimensions, but everything is the same mode.
@@ -666,7 +667,7 @@ data(iris)
 # Fix it so that the widths are twice the initial values
 
 
-# Somone forget to enter the stem data. 
+# Someone forget to enter the stem data. 
 # Luckily we know that the stems scale allometrically as
 # Twice the sepal length plus the square of the petal length
 # Calculate the stem length and add a new column called "Stem.Length"
@@ -916,9 +917,9 @@ when you just want to use one or a few functions.
 
 Markdown is a language use for "typesetting", like the HTML that makes
 up webpages. There is also a specific syntax that can be used to
-combin Markdown with the R language. This allows the creation of
+combine Markdown with the R language. This allows the creation of
 documents that combine text, code and output. This is an extremely
-useful tool for the scientific reproduciblity kit. One particular
+useful tool for the scientific reproducibility kit. One particular
 aspect that is extremely powerful is the ability to automatically
 create many different "rendered" documents from a single document,
 such as webpages, PDFs, Shiny Apps and many more formats.
@@ -930,37 +931,75 @@ https://rmarkdown.rstudio.com/r_notebooks.html
 
 ## Data testing and conditionals (5 min)
 
-Conditional statements and operations allow us to check if an
-expectation is true or not. This is a crucial 
+It is highly likely that a dataset will change over time. Data values
+can be corrected, and/or new data can be added to the dataset. Because
+of this, it can be extremely helpful to write "tests" into a script to
+assure that the data being analyzed conforms to expectations. 
+
+Conditional statements and operations are useful tools that allow us
+to check if an expectation is true or not. 
+
+Conditional operations compare values and include: 
+
+- equality *==*
+- greater than *>*
+- less than *<*
+- greater than or equal to *>=*
+- less than or equal to *<=*
+
+Conditional statements, have a syntax similar to functions and consist
+of two parts. The first part is the *if* which defines whether or not
+the next part, some code that's inside curly braces *{}*, is
+executed. 
+
+For example:
 
 ```{r, eval = FALSE}
 
-if (is.numeric(x[,1]) == FALSE){
-    warning("Danger Will Robinson!")
+if (is.numeric(x[,1])){
+    print("Everything's cool.")
 }else{
-    print("Everything's cool...")
+    warning("Danger Will Robinson!")
 }
 
 ```
 
+Here, we've constructed a conditional that checks if the first column
+in the variable *x* is numeric. If it is, then **R** will say
+"Everything's cool.", but if it's not numeric then **R** will warn
+us. Thus, we've constructed a simple test for data in our variable
+*x*. 
+
 ## Activity: Write your own test! (5 min)
 
-Think of an assumption you would have about the data and write a test
-to (at least partly) check that the firefly data are imported
-correctly.
+Using the previous example as a template, think of an assumption you
+would have about the data and write a test to (at least partly) check
+that the firefly data are imported correctly.
 
 
 # Advanced Topics
 
+The following sets of topics and pointers to **R** packages or sources
+of information that can be useful for ecological analysis and
+increasing reproducibility. 
+
 ## Data Wrangling
 
-- *dplyr* = reorganize data
-- *stringr* manipulate text (aka. "strings")
-- *lubridate* for handling dates and times
-- *sp* and *raster* for spatial datasets
-- *purrr* "apply" functions = functions for repeating functions
+The following are **R** packages associated with a collection of
+interacting **R** packages from the *tidyverse*, developed by folks
+associated with *RStudio*. They provide some sophisticated tools for
+data science. 
+
+- *dplyr* is an **R** package for reorganize data
+- *stringr* is a package for manipulating text (aka. "strings")
+- *lubridate* handles date and time data
+- *sp* and *raster* are useful for spatial datasets
+- *purrr* is a set of functions that can be used to repeat tasks
 
 ## Sharing
+
+Here are some useful tools to check out if you want to improve how you
+are sharing your code, data or results: 
 
 - *github* = sharing git repositories
 - *RMarkdown* = organized documentation, code and results
@@ -968,19 +1007,33 @@ correctly.
 
 ## Better R
 
-- Efficiency with *profVis*
-- Automated workflow tracking with data provenance *RDatatracker*
-- Code cleaning with *Rclean*
+There are now lots of tools that help users write clearer, cleaner,
+more efficient code.
+
+- *profVis* is a package for increasing code efficiency
+- *formatR* re-formats code using software syntax best practices
+- *RDatatracker* is a tool for automated workflow tracking 
+- *Rclean* allows you to isolate subsets of code in large "messy" scripts
 
 ## Advanced Data Science
 
-- BASH
-- Web data archives
-- Open Licensing
-- Continuous integration
-- Virtual Machines
-- Docker
+There are many tools that are useful for data analysis beyond **R**
+and many of the topics mentioned in the workshop. Here are a few of
+the more salient ones:
 
-
-
+- **BASH** is a language that is useful for navigating systems and
+  organizing and manipulating files (highly recommended)
+- Online data archiving can be done with github, Data Dryad, Figshare,
+  Dataverse and many others. Talk with your research group to figure
+  out what option is best for you. 
+- Open Licensing is important for assuring that your software will be
+  used appropriately by others that use and improve it. For more
+  information, check out https://opensource.org/licenses.
+- Continuous integration facilitates automatic updating, testing and
+  deployment of software. Two useful ones are https://travis-ci.org
+  and https://circleci.com. 
+- Virtual machines and containers are tools that help to deal with
+  compatibility issues that are created by different operating
+  systems. Check out https://www.virtualbox.org and
+  https://www.docker.com for more information. 
 
