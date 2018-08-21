@@ -653,7 +653,8 @@ df[, "x"] <- new.x
 
 1. Start a new script called "iris.R"
 2. Load the dataset "iris" using *data(iris)*
-3. Then do the following wranglings:
+3. Then do the following wranglings written in the comments of the
+   following code:
 
 ```{r, eval = FALSE}
 
@@ -676,8 +677,14 @@ data(iris)
 
 ## 
 ## 
-## 
+## The answer is below
 ## Wait for it...
+## 
+## 
+## 
+## 
+## 
+## 
 ## 
 ## 
 ## 
@@ -765,11 +772,17 @@ https://www.r-bloggers.com/rstudio-and-github/.
 
 **Citizen Science - Firefly Watch**
 
-Dr. Sara Lewis at Tufts University
+In this acitvity, we're going to use data collected by the *Firefly
+Watch* project organized by Dr. Sara Lewis' lab at Tufts University
+and the folks at Mass Audubon. For more information about the project:
+https://www.massaudubon.org/get-involved/citizen-science/firefly-watch. 
 
-https://www.massaudubon.org/get-involved/citizen-science/firefly-watch
+Our main goal here is to write a script that imports the data and then
+explores it through summary functions and plotting. 
 
 *Setup a new project*
+
+**Make sure that your working directory is set correctly**
 
 1. Create a new project (*File -> New Project -> New Directory ->
    firefly*, check "Create a git repository") 
@@ -777,11 +790,8 @@ https://www.massaudubon.org/get-involved/citizen-science/firefly-watch
 3. Download the firefly data from https://github.com/MKLau/reprosci/blob/master/data/FFW_Data_2016.csv
 4. Create a new script in *src* called "firefly.R"
 5. Now start writing your script with your header
-6. Import the data
-7. Explore them using *head*, *tail*
-8. *str* and *summary*
-
-**Make sure that your working directory is set correctly**
+6. Import the data (make sure that you put it in the correct directory)
+7. Explore them using *head*, *tail*, *str* and *summary*
 
 ## Get versioning with git (10 min)
 
@@ -819,7 +829,8 @@ Examples:
 
 ## Data wrangling review from Day 2 (10 min)
 
-We're going to cover some more info on how to work with data.
+We're going to cover some more info on how to work with data. See the
+Day 2 notes above. 
 
 <!-- 60 min -->
 
