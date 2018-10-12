@@ -1,0 +1,263 @@
+---
+title: "Opportunity in the reproducibility crisis: Computational tools to improve scientific benefaction"
+subtitle: 
+author: Matthew K. Lau, PhD (Harvard Forest)
+output: slidy_presentation
+
+---
+
+<!-- output: powerpoint_presentation -->
+<!-- ```{r setup, include=FALSE} -->
+<!-- knitr::opts_chunk$set(echo = FALSE) -->
+<!-- ``` -->
+
+# 
+
+![](Baker2016_1.png)
+
+# 
+
+![](Baker2016_2.png)
+
+# 
+
+![](Baker2016_3.png)
+
+# 
+
+![](pilosof1.png)
+
+<!-- I'm an ecologist -->
+
+
+# Motivation: Code in Ecology
+
+![](white2016front.png){width=70%}
+
+# Motivation: Ecology Journal Policies
+
+![](white2016.png){width=50%}
+
+*Meeslan, Heer and White 2016 Trends in Eco Evo*
+
+# Motivation: Social Science Journal Policies
+
+![](crosas2018.png){width=70%}
+
+*Crosas et al. 2018 SocArXiv*
+
+# Motivation: Journal Policy Impacts
+
+![](Stodden2018front.png){width=70%}
+
+
+# Motivation: Journal Policy Impacts
+
+![](stodden2018a.png){width=70%}
+
+# Motivation: Journal Policy Impacts
+
+![](stodden2018b.png){width=70%}
+
+*Stodden et al. 2018 PNAS*
+
+# Goal: Repeatability/Reproducibility
+
+metadata + data + code + results + contact
+
+# Goal: Repeatability/Reproducibility
+
+BestPractices(metadata + data + code + results + contact)
+
+# Goal: Repeatability/Reproducibility
+
+BestPractices(metadata * data * code * results * contact)
+
+# Opportunity: Benefaction not just reproducibility
+
+$$ Synthesis = f(benefaction) $$
+
+# Opportunity: Benefaction not just reproducibility
+
+![](colberg_repeat.png){width=70%}
+
+*Colberg et al. 2015 Comm ACM*
+
+# Opportunity: Benefaction not just reproducibility
+
+![](colberg_repro.png){width=70%}
+
+*Colberg et al. 2015 Comm ACM*
+
+# Opportunity: Benefaction not just reproducibility
+
+![](colberg_benefact.png){width=70%}
+
+*Colberg et al. 2015 Comm ACM*
+
+
+# Tools: Research Pipeline
+
+| Thought      | Data Collection            | Data Processing               | Analysis                          | Reporting                  | 
+| :---------   | :------------------------- | :---------------------------- | :-------------------------------- | :------------------------- | 
+| *Meta-Data*  | *Meta-Data* + *Provenance* | *Provenance* + *Versioning*   | *Versioning* + *Provenance*       | *Lit Prog* + *Versioning*  | 
+
+
+# Tools: Overview
+
+|                 | Dataverse  | Code Ocean  |  Zenodo   | Figshare  | Dryad    | PANGAEA | GitHub & Bitbucket | Supplementary Material |
+| :-------------- | :----:     | :----:      | :----:    | :-------: | :---:    | :-----: | :----------------: | :--------------------: |
+| Meta Data       | Yes        | Yes         |  Yes      | Yes       | Yes      | Yes     | Yes                | Yes                    |
+| Data Hosting    | Yes        | Yes         |  Yes      | Yes       | Yes      | Yes     | Yes                | Yes                    |
+| Code Hosting    | Yes        | Yes         |  Yes      | No        | No       | No      | Yes                | Yes                    |
+| Versioning      | No?        | No?         |  Yes      | No        | No       | No      | Yes                | No                     |
+| Capsules        | No         | Yes         |  No       | No        | No       | No      | No                 | No                     |
+| Assigns DOI     | Yes        | Yes         |  Yes      | Yes       | Yes      | Yes     | No                 | No                     |
+| License         | Flexible   | Flexible    | Flexible  | MIT       | CC0      | CC-BY   | Flexible           | None                   |
+| Cost            | None       | Possible    |  None     | None      | Possible | None    | None               | None                   |
+
+*Adapted from Mislan, Heer & White 2016 Trends in Ecol Evol*
+
+
+# Reality: Common Ground
+
+![](nsd.png){width=70%}
+
+# Reality: Common Ground
+
+![](cern_hf.png){width=70%}
+
+<!-- Similar challenges in Ecosystem Ecology and Particle Physics -->
+
+# Reality: Common Ground
+
+- *Most scientists don't want to produce software, they want to do
+science.* 
+
+
+# Reality: Common Ground
+
+- *Most scientists don't want to produce software, they want to do
+science.* 
+
+- *Let's automate as much of the process as we can to lower activation
+energy, decrease error rates and increase sharing.*
+
+
+# Tools: Encapsulator 
+
+![IEEE: Computing in Science & Engineering 2018](CISE2018.png)
+
+
+# Tools: Encapsulator 
+
+Goal: Simplify computational reproducibility
+
+1. Create a data "capsule" with code, data and environment
+
+# Tools: Encapsulator 
+
+Goal: Simplify computational reproducibility
+
+1. Create a data "capsule" with code, data and environment
+2. Increase transparency with "cleaned" code and workspace
+
+# 
+
+![](cise1.png){width=70%}
+
+# 
+
+![](cise2.png){width=50%}
+
+# What is data provenance?
+
+![](provw3c.png){width=80%}
+
+# What is data provenance?
+
+![](provEx.png){width=50%}
+
+# Prov. Huh. What is it good for? 
+
+![](blazing_saddles2.JPG)
+
+<!-- However, after almost ten years of being an open-source advocate... -->
+<!-- Ecologists aren't CS majors, they're tree climbing, scub-diving types -->
+
+# Prov. Huh. What is it good for?
+
+![](rgm.jpg)
+
+<!-- Single-minded software, get the analysis done! -->
+
+# Prov. Huh. What is it good for?
+
+![](messy1.png){width=100%}
+
+# Prov. Huh. What is it good for? 
+
+![](cise2.png){width=40%} 
+
+# encapsulator(A Kit of Parts): Checking inputs and outputs
+
+- *lintR* (Hester 2017)
+- *containR* (Chen 2018)
+
+# encapsulator(A Kit of Parts): Code Formatting
+
+- *formatR* (Xie 2017) 
+- *styler* (Muller & Walther 2018)
+
+# encapsulator(A Kit of Parts): Code Cleaning 
+
+- *Rclean* (Lau 2018) 
+- *CodeDepends* (Lang et al. 2018)
+
+# encapsulator(A Kit of Parts): Capsule creation
+
+- Virtual Machine (encapsulator)
+- Docker (containR)
+- Literate computing notebook (Jupyter)
+- Compressed (Reprozip)
+- Capsule database (Code Ocean)
+
+# Conclusion: The next great challenge is synthesis
+
+<!-- Benefaction not irreproducibility! -->
+
+** Software should not limit science **
+
+# Conclusion: The next great challenge is synthesis
+
+![](dataverse_world.png){width=20%}
+
+
+# Questions and Discussion:
+
+*Possible discussion topics:*
+
+![](dataverse_r_project.png){width=20%}
+
+1. What checks are in place to verify and link dataverses?
+2. Can provenance production become a part of the checking system?
+3. What are the pros and cons of automated checking/verification
+   and/or cleaning/encapsulation of dataverses?
+4. I'm focused on R's wild-wild-west, but how does this translate to
+   other languages?
+
+*Contact Info:*
+
+**Email: _matthewklau@fas.harvard.edu_**
+
+**Github: MKLau**
+
+**Slack: MKLau**
+
+*Much of this work was supported by NSF SSI-1450277 (End-to-End Provenance) and ACI-1448123 (Citation++).*
+*More details are available at https://projects.iq.harvard.edu/provenance-at-harvard*
+
+![](inst_2.png){width=19%}
+![](inst_3.png){width=20%}
+![](inst_1.png){width=25%}
+![](inst_4.png){width=15%}
