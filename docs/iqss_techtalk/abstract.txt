@@ -1,0 +1,20 @@
+Recent findings of low levels of reproducibility of research has been
+a wake-up call to scientists. In addition to the challenges of making
+study details and data and meta-data availible and accessible, the
+rapid rise of custom analytical software (such as R, MatLab and Python
+analytical scripts) is quickly becoming a significant challenge as
+well. Such analytical scripts that are used in scientific research,
+even if written in an open-source language, are often written as
+informal software written without following best practices, leading to
+a proliferation of irreproducbile software. Given the realities of the
+demands placed on scientists, we have investigated use of "data
+provenance" (i.e. a formalized record of a computational process) to
+produce tools to help researchers improve the transparency and
+reproducibility of analytical software associated with a research
+project. This talk will present the concept of data provenance and how
+it has been applied to create tools, such as an automatic project
+"capsule" creation program (encapsulator) and a code cleaning package
+for R (Rclean), to aid in the process of sharing research for future
+uses (i.e. benefaction) through public project repositories like
+Dataverse.
+
