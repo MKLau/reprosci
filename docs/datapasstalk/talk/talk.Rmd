@@ -1,0 +1,128 @@
+---
+title: "Easier reproducibility for scientists with encapsulation"
+output: powerpoint_presentation
+
+---
+
+<!-- output: powerpoint_presentation -->
+
+<!-- ```{r setup, include=FALSE} -->
+<!-- knitr::opts_chunk$set(echo = FALSE) -->
+<!-- ``` -->
+
+
+# 
+
+![](pilosof1.png)
+
+<!-- I'm an ecologist -->
+
+# 
+
+<!-- long an open-source proponent  -->
+
+"Software should not limit science."
+
+# 
+
+![](Baker2016_1.png)
+
+# 
+
+![](Baker2016_2.png)
+
+# 
+
+![](Baker2016_3.png)
+
+
+# 
+
+![](blazing_saddles2.JPG)
+
+
+<!-- However, after almost ten years of being an open-source advocate... -->
+<!-- Ecologists aren't CS majors, they're tree climbing, scub-diving types -->
+
+# 
+
+![](rgm.jpg)
+
+<!-- Single-minded software, get the analysis done! -->
+
+# 
+
+![](nsd.png)
+
+# 
+
+![](cern_hf.png)
+
+<!-- Similar challenges in Ecosystem Ecology and Particle Physics -->
+
+# 
+
+![](dataverse_r_project.png)
+
+# 
+
+![IEEE: Computing in Science & Engineering 2018](CISE2018.png)
+
+
+# Encapsulator
+
+Goal: Simplify computational reproducibility
+
+1. Create a data "capsule" with code, data and environment
+2. Increase transparency with "cleaned" code and workspace
+
+# 
+
+![](cise1.png){width=70%}
+
+# 
+
+![](cise2.png){width=100%}
+
+# What is data provenance?
+
+![](provw3c.png){width=100%}
+
+# What is data provenance?
+
+![](provEx.png){width=100%}
+
+
+# Prov. Huh. What is it good for?
+
+![](messy1.png){width=100%}
+
+# 
+
+![](cise2.png){width=50%} 
+
+# 
+
+![](messy2.png){width=50%}
+
+# Challenges
+
+- Out-of-tree Libraries 
+- Nondeterminism
+- Capsule OS (*Linux*, *VirtualBox*) 
+- Language Support (*R*)
+
+# Future Directions
+
+- Test Dataverse products
+- Integration with IDEs (*RStudio*)
+- Container Support (e.g. *Docker*)
+- Domain-Specific Environments
+
+**Email: _matthewklau@fas.harvard.edu_**
+**Github: MKLau**
+
+*This work was supported by NSF grants SSI-1450277 (End-to-End Provenance) and ACI-1448123 (Citation++).*
+
+*More details about those projects are available at
+ https://projects.iq.harvard.edu/provenance-at-harvard.*
