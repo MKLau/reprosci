@@ -1,0 +1,7 @@
+Matthew K. Lau is a research fellow at Harvard University's Harvard
+Forest Long-Term Ecological Research Site, and a member of the
+Ecological Society of America. His research interests include the
+ecological and evolutionary dynamics of ecological networks. A
+long-time supporter of open source programming tools for scientific
+analyses, he has taught undergraduate- and graduate-level courses and
+workshops on statistical programming and reproducible research.
