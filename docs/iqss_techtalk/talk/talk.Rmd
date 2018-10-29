@@ -103,6 +103,24 @@ $$ Synthesis = f(benefaction) $$
 | *Meta-Data*  | *Meta-Data* + *Provenance* | *Provenance* + *Versioning*   | *Versioning* + *Provenance*       | *Lit Prog* + *Versioning*  | 
 
 
+<<<<<<< HEAD
+=======
+# Tools: Overview
+
+|                 | Dataverse  | Code Ocean  |  Zenodo   | Figshare  | Dryad    | PANGAEA | GitHub & Bitbucket | Supplementary Material |
+| :-------------- | :----:     | :----:      | :----:    | :-------: | :---:    | :-----: | :----------------: | :--------------------: |
+| Meta Data       | Yes        | Yes         |  Yes      | Yes       | Yes      | Yes     | Yes                | Yes                    |
+| Data Hosting    | Yes        | Yes         |  Yes      | Yes       | Yes      | Yes     | Yes                | Yes                    |
+| Code Hosting    | Yes        | Yes         |  Yes      | No        | No       | No      | Yes                | Yes                    |
+| Versioning      | No?        | No?         |  Yes      | No        | No       | No      | Yes                | No                     |
+| Capsules        | No         | Yes         |  No       | No        | No       | No      | No                 | No                     |
+| Assigns DOI     | Yes        | Yes         |  Yes      | Yes       | Yes      | Yes     | No                 | No                     |
+| License         | Flexible   | Flexible    | Flexible  | MIT       | CC0      | CC-BY   | Flexible           | None                   |
+| Cost            | None       | Possible    |  None     | None      | Possible | None    | None               | None                   |
+
+*Adapted from Mislan, Heer & White 2016 Trends in Ecol Evol*
+
+>>>>>>> 73d3a56490ddaf223e9b2a0cc1cad60b8683899c
 
 # Reality: Common Ground
 
@@ -147,6 +165,7 @@ Goal: Simplify computational reproducibility
 1. Create a data "capsule" with code, data and environment
 2. Increase transparency with "cleaned" code and workspace
 
+<<<<<<< HEAD
 
 # Tools: Encapsulator 
 
@@ -163,11 +182,21 @@ Basic Usage (current paradigm):
 2. Run encapsulator from the console
 3. List desired results
 4. Product = Capsule containing essential code and data with a virtual machine
+=======
+# 
+
+![](cise1.png){width=70%}
+
+# 
+
+![](cise2.png){width=50%}
+>>>>>>> 73d3a56490ddaf223e9b2a0cc1cad60b8683899c
 
 # What is data provenance?
 
 ![](provw3c.png){width=80%}
 
+<<<<<<< HEAD
 
 # Tools: Encapsulator
 
@@ -212,6 +241,47 @@ intervention and technical knowledge.
 4. Time capsules, their installation, and re-execution must be
    platform-independent.
 
+=======
+# What is data provenance?
+
+![](provEx.png){width=50%}
+
+# Prov. Huh. What is it good for? 
+
+![](blazing_saddles2.JPG)
+
+<!-- However, after almost ten years of being an open-source advocate... -->
+<!-- Ecologists aren't CS majors, they're tree climbing, scub-diving types -->
+
+# Prov. Huh. What is it good for?
+
+![](rgm.jpg)
+
+<!-- Single-minded software, get the analysis done! -->
+
+# Prov. Huh. What is it good for?
+
+![](messy1.png){width=100%}
+
+# Prov. Huh. What is it good for? 
+
+![](cise2.png){width=40%} 
+
+# encapsulator(A Kit of Parts): Checking inputs and outputs
+
+- *lintR* (Hester 2017)
+- *containR* (Chen 2018)
+
+# encapsulator(A Kit of Parts): Code Formatting
+
+- *formatR* (Xie 2017) 
+- *styler* (Muller & Walther 2018)
+
+# encapsulator(A Kit of Parts): Code Cleaning 
+
+- *Rclean* (Lau 2018) 
+- *CodeDepends* (Lang et al. 2018)
+>>>>>>> 73d3a56490ddaf223e9b2a0cc1cad60b8683899c
 
 # encapsulator(A Kit of Parts): Capsule creation
 
@@ -221,6 +291,7 @@ intervention and technical knowledge.
 - Compressed (Reprozip)
 - Capsule database (Code Ocean)
 
+<<<<<<< HEAD
 
 # What is data provenance?
 
@@ -262,6 +333,8 @@ intervention and technical knowledge.
 1. Eases and (potentially) improves project archiving
 2. Increases clarity for re-use (others and self)
 
+=======
+>>>>>>> 73d3a56490ddaf223e9b2a0cc1cad60b8683899c
 # Conclusion: The next great challenge is synthesis
 
 <!-- Benefaction not irreproducibility! -->
@@ -301,6 +374,7 @@ intervention and technical knowledge.
 ![](inst_3.png){width=20%}
 ![](inst_1.png){width=25%}
 ![](inst_4.png){width=15%}
+<<<<<<< HEAD
 
 
 # Tools: Overview
@@ -334,3 +408,5 @@ intervention and technical knowledge.
 
 <!-- - *Rclean* (Lau 2018)  -->
 <!-- - *CodeDepends* (Lang et al. 2018) -->
+=======
+>>>>>>> 73d3a56490ddaf223e9b2a0cc1cad60b8683899c
