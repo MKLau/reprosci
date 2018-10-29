@@ -1,0 +1,3 @@
+[submodule "docs/syrac_talk/talk/marp"]
+	path = docs/syrac_talk/talk/marp
+	url = git@github.com:yhatt/marp.git

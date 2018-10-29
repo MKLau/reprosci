@@ -1,13 +1,18 @@
 ---
-title: "Opportunity in the reproducibility crisis: Computational tools to improve scientific benefaction"
-subtitle: 
-author: \ \ \ Matthew K. Lau, PhD (Harvard Forest)
+title: "Opportunity in the Reproducibility Crisis"
+subtitle: "Computational tools to improve scientific benefaction"
+author: Matthew K. Lau, PhD 
 output:
-beamer_presentation:
-theme: "metropolis"
-fig_caption: no
-
+  beamer_presentation:
+    theme: "default"
+    colortheme: "seagull"
+    fonttheme: "structurebold"
+header-includes:
+  - \titlegraphic{\includegraphics[width=0.4\paperwidth]{./hf_header.png}}
 ---
+
+<!-- 29October2018 -->
+
 
 <!-- output: powerpoint_presentation -->
 <!-- ```{r setup, include=FALSE} -->
@@ -20,7 +25,7 @@ fig_caption: no
 2. Opportunities (data and code synthesis)
 3. Tools for improving benefaction not just reproducibility
 - From wet to dry to digitial (notes and digitizing records)
-- Version Control for data and code (???RStudio???)
+- Version Control for data and code (RStudio)
 - Environment and dependencies
 - Testing and checks (testthat, testdata)
 - Data provenance (RDT, provR, recordR)
@@ -34,15 +39,15 @@ fig_caption: no
 
 ![](Baker2016_1.png)
 
-# 
+#
 
 ![](Baker2016_2.png)
 
-# 
+#
 
 ![](Baker2016_3.png)
 
-# 
+#
 
 ![](pilosof1.png)
 
@@ -117,9 +122,9 @@ $$ Synthesis = f(benefaction) $$
 
 # Tools: Research Pipeline
 
-| Thought      | Data Collection            | Data Processing               | Analysis                          | Reporting                  | 
-| :---------   | :------------------------- | :---------------------------- | :-------------------------------- | :------------------------- | 
-| *Meta-Data*  | *Meta-Data* + *Provenance* | *Provenance* + *Versioning*   | *Versioning* + *Provenance*       | *Lit Prog* + *Versioning*  | 
+| Thought      | Data Collection            | Data Processing               | Analysis                          | Reporting                  |
+| :---------   | :------------------------- | :---------------------------- | :-------------------------------- | :------------------------- |
+| *Meta-Data*  | *Meta-Data* + *Provenance* | *Provenance* + *Versioning*   | *Versioning* + *Provenance*       | *Lit Prog* + *Versioning*  |
 
 
 
@@ -136,30 +141,30 @@ $$ Synthesis = f(benefaction) $$
 # Reality: Common Ground
 
 - *Most scientists don't want to produce software, they want to do
-science.* 
+science.*
 
 
 # Reality: Common Ground
 
 - *Most scientists don't want to produce software, they want to do
-science.* 
+science.*
 
 - *Let's automate as much of the process as we can to lower activation
 energy, decrease error rates and increase sharing.*
 
 
-# Tools: Encapsulator 
+# Tools: Encapsulator
 
 ![IEEE: Computing in Science & Engineering 2018](CISE2018.png)
 
 
-# Tools: Encapsulator 
+# Tools: Encapsulator
 
 Goal: Simplify computational reproducibility
 
 1. Create a data "capsule" with code, data and environment
 
-# Tools: Encapsulator 
+# Tools: Encapsulator
 
 Goal: Simplify computational reproducibility
 
@@ -167,14 +172,14 @@ Goal: Simplify computational reproducibility
 2. Increase transparency with "cleaned" code and workspace
 
 
-# Tools: Encapsulator 
+# Tools: Encapsulator
 
 Goal: Simplify computational reproducibility
 
 1. Capsule = all necessary software and data
 2. Cleaned = organize files, remove non-essential code and re-format
 
-# Tools: Encapsulator 
+# Tools: Encapsulator
 
 Basic Usage (current paradigm):
 
@@ -203,7 +208,7 @@ Example: Messycode
 - intermediate objects that are abandoned,
 - library and new data calls throughout the script,
 - output written to disk but not used in final documents,
-- code that is not modularized, 
+- code that is not modularized,
 - code that is syntactically correct but not particularly comprehensible.
 
 # Tools: Encapsulator
@@ -218,7 +223,7 @@ Example: Messycode
 
 ![](encap_clean.png){width=70%}
 
-# Tools: Encapsulator 
+# Tools: Encapsulator
 
 Requirements: Simplify computational reproducibility
 
