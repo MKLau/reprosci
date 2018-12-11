@@ -11,9 +11,9 @@ output: slidy_presentation
 <!-- knitr::opts_chunk$set(echo = FALSE) -->
 <!-- ``` -->
 
-# 
+# Crisis: rampant irreproducibility
+# Opportunity: easier scientific benefaction
 
-<<<<<<< HEAD
 # Goal
 
 - Easier methods for bridging the software engineering gap
@@ -33,8 +33,6 @@ output: slidy_presentation
 
 # 
 
-=======
->>>>>>> 62b58a5a0f078f2dceca16f7f5c0ac30e6ae7c4a
 ![](Baker2016_1.png)
 
 # 
@@ -125,24 +123,6 @@ $$ Synthesis = f(benefaction) $$
 | *Meta-Data*  | *Meta-Data* + *Provenance* | *Provenance* + *Versioning*   | *Versioning* + *Provenance*       | *Lit Prog* + *Versioning*  | 
 
 
-<<<<<<< HEAD
-=======
-# Tools: Overview
-
-|                 | Dataverse  | Code Ocean  |  Zenodo   | Figshare  | Dryad    | PANGAEA | GitHub & Bitbucket | Supplementary Material |
-| :-------------- | :----:     | :----:      | :----:    | :-------: | :---:    | :-----: | :----------------: | :--------------------: |
-| Meta Data       | Yes        | Yes         |  Yes      | Yes       | Yes      | Yes     | Yes                | Yes                    |
-| Data Hosting    | Yes        | Yes         |  Yes      | Yes       | Yes      | Yes     | Yes                | Yes                    |
-| Code Hosting    | Yes        | Yes         |  Yes      | No        | No       | No      | Yes                | Yes                    |
-| Versioning      | No?        | No?         |  Yes      | No        | No       | No      | Yes                | No                     |
-| Capsules        | No         | Yes         |  No       | No        | No       | No      | No                 | No                     |
-| Assigns DOI     | Yes        | Yes         |  Yes      | Yes       | Yes      | Yes     | No                 | No                     |
-| License         | Flexible   | Flexible    | Flexible  | MIT       | CC0      | CC-BY   | Flexible           | None                   |
-| Cost            | None       | Possible    |  None     | None      | Possible | None    | None               | None                   |
-
-*Adapted from Mislan, Heer & White 2016 Trends in Ecol Evol*
-
->>>>>>> 73d3a56490ddaf223e9b2a0cc1cad60b8683899c
 
 # Reality: Common Ground
 
@@ -187,10 +167,6 @@ Goal: Simplify computational reproducibility
 1. Create a data "capsule" with code, data and environment
 2. Increase transparency with "cleaned" code and workspace
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
 # Tools: Encapsulator 
 
 Goal: Simplify computational reproducibility
@@ -206,110 +182,12 @@ Basic Usage (current paradigm):
 2. Run encapsulator from the console
 3. List desired results
 4. Product = Capsule containing essential code and data with a virtual machine
-=======
-# 
 
-![](cise1.png){width=70%}
-
-# 
-
-![](cise2.png){width=50%}
->>>>>>> 73d3a56490ddaf223e9b2a0cc1cad60b8683899c
->>>>>>> 62b58a5a0f078f2dceca16f7f5c0ac30e6ae7c4a
 
 # What is data provenance?
 
 ![](provw3c.png){width=80%}
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-# Tools: Encapsulator
-
-Example: Messycode
-
-![](encap_messy.png){width=70%}
-
-# Tools: Encapsulator
-
-Example: Messycode
-
-- near stream-of-consciousness coding that follows a train of thought in script development,
-- output to console that is not written to disk,
-- intermediate objects that are abandoned,
-- library and new data calls throughout the script,
-- output written to disk but not used in final documents,
-- code that is not modularized, 
-- code that is syntactically correct but not particularly comprehensible.
-
-# Tools: Encapsulator
-
-Example: Messycode
-
-![](encap_messy.png){width=70%}
-
-# Tools: Encapsulator
-
-Example: Messycode
-
-![](encap_clean.png){width=70%}
-
-# Tools: Encapsulator 
-
-Requirements: Simplify computational reproducibility
-
-1. The environment should present a user interface familiar to
-   scientists.
-2. Encapsulation and use (de-encapsulation) of time capsules must
-require minimal technical expertise.
-3. The installation process itself must also require minimum
-intervention and technical knowledge.
-4. Time capsules, their installation, and re-execution must be
-   platform-independent.
-
-=======
-# What is data provenance?
-
-![](provEx.png){width=50%}
-
-# Prov. Huh. What is it good for? 
-
-![](blazing_saddles2.JPG)
-
-<!-- However, after almost ten years of being an open-source advocate... -->
-<!-- Ecologists aren't CS majors, they're tree climbing, scub-diving types -->
-
-# Prov. Huh. What is it good for?
-
-![](rgm.jpg)
-
-<!-- Single-minded software, get the analysis done! -->
-
-# Prov. Huh. What is it good for?
-
-![](messy1.png){width=100%}
-
-# Prov. Huh. What is it good for? 
-
-![](cise2.png){width=40%} 
-
-# encapsulator(A Kit of Parts): Checking inputs and outputs
-
-- *lintR* (Hester 2017)
-- *containR* (Chen 2018)
-
-# encapsulator(A Kit of Parts): Code Formatting
-
-- *formatR* (Xie 2017) 
-- *styler* (Muller & Walther 2018)
-
-# encapsulator(A Kit of Parts): Code Cleaning 
-
-- *Rclean* (Lau 2018) 
-- *CodeDepends* (Lang et al. 2018)
->>>>>>> 73d3a56490ddaf223e9b2a0cc1cad60b8683899c
->>>>>>> 62b58a5a0f078f2dceca16f7f5c0ac30e6ae7c4a
 
 # encapsulator(A Kit of Parts): Capsule creation
 
@@ -319,54 +197,7 @@ intervention and technical knowledge.
 - Compressed (Reprozip)
 - Capsule database (Code Ocean)
 
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-
-# What is data provenance?
-
-![](provw3c.png){width=80%}
-
-
-# What is data provenance?
-
-![](provEx.png){width=50%}
-
-# Data Provenance and R
-
-![](blazing_saddles2.JPG)
-
-<!-- However, after almost ten years of being an open-source advocate... -->
-<!-- Ecologists aren't CS majors, they're tree climbing, scub-diving types -->
-
-# Data Provenance and R
-
-![](rgm.jpg)
-
-<!-- Single-minded software, get the analysis done! -->
-
-# Data Provenance and R
-
-![](encap_clean.png){width=70%}
-
-# encapsulator(A Kit of Parts): Provenance Details
-
-- inputs
-- outputs
-- transient data objects and their values
-- operations
-- library dependencies
-
-
-# Encapsulator and benefaction
-
-1. Eases and (potentially) improves project archiving
-2. Increases clarity for re-use (others and self)
-
-=======
->>>>>>> 73d3a56490ddaf223e9b2a0cc1cad60b8683899c
->>>>>>> 62b58a5a0f078f2dceca16f7f5c0ac30e6ae7c4a
 # Conclusion: The next great challenge is synthesis
 
 <!-- Benefaction not irreproducibility! -->
@@ -406,7 +237,6 @@ intervention and technical knowledge.
 ![](inst_3.png){width=20%}
 ![](inst_1.png){width=25%}
 ![](inst_4.png){width=15%}
-<<<<<<< HEAD
 
 
 # Tools: Overview
@@ -440,5 +270,3 @@ intervention and technical knowledge.
 
 <!-- - *Rclean* (Lau 2018)  -->
 <!-- - *CodeDepends* (Lang et al. 2018) -->
-=======
->>>>>>> 73d3a56490ddaf223e9b2a0cc1cad60b8683899c
