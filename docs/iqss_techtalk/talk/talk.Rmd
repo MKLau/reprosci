@@ -17,19 +17,34 @@ header-includes:
 <!-- knitr::opts_chunk$set(echo = FALSE) -->
 <!-- ``` -->
 
-
-
 # Overview
 -  Crisis: rampant irreproducibility
 -  Opportunity: better science
+- Continuous Integration and Capsules
+- Provenance and bridging the Software Engineering Gap
 
-# Goal
-- Easier methods for bridging the software engineering gap
-- Capsules and provenance
-- mkSci = continuous integration is the future of science
+# The Reproducibility Crisis
 
-# Benefaction
-- 
+# The Scientific Process
+
+# Opportunity = Benefaction
+
+# Reality = The Engineering Gap
+
+# Encapsulation and Continuous Integration
+
+# encapsulator = Easier Capsules and CI
+
+# Conclusion
+
+- Capsules = sharing (data, code, metadata)
+- Continuous Integration = development * sharing * discovery
+
+# Thanks!
+
+
+
+# Open is not enough
 - Trisovic et al 2018
 
 
