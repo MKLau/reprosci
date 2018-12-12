@@ -1,8 +1,14 @@
 ---
-title: "Opportunity in the reproducibility crisis: Computational tools to improve scientific benefaction"
-subtitle: 
-author: \ \ \ Matthew K. Lau, PhD (Harvard Forest)
-output: slidy_presentation
+title: "Opportunity in the Reproducibility Crisis"
+subtitle: "Computational tools to improve scientific benefaction"
+author: Matthew K. Lau, PhD 
+output:
+  beamer_presentation:
+    theme: "default"
+    colortheme: "seagull"
+    fonttheme: "structurebold"
+header-includes:
+  - \titlegraphic{\includegraphics[width=0.4\paperwidth]{./hf_header.png}}
 
 ---
 
@@ -11,73 +17,79 @@ output: slidy_presentation
 <!-- knitr::opts_chunk$set(echo = FALSE) -->
 <!-- ``` -->
 
-# Crisis: rampant irreproducibility
-# Opportunity: easier scientific benefaction
+
+
+# Overview
+-  Crisis: rampant irreproducibility
+-  Opportunity: better science
 
 # Goal
-
 - Easier methods for bridging the software engineering gap
 - Capsules and provenance
 - mkSci = continuous integration is the future of science
 
-# Notebooks
-
-- Rmarkdown
-- Jupyter Notebooks
-
-# Capsule Databases/Engines
-
-- CodeOcean
-- Globus
+# Benefaction
+- 
+- Trisovic et al 2018
 
 
-# 
+# Reproducibility: Computation
+- Project architecture (README, src, doc, data, bin, results)
+- Notebooks (Rmarkdown, Jupyter)
+- Version control (git, subversion)
+- Capsule Databases/Engines (CodeOcean, Globus)
+- Continuous Integration (at the beginning)
+- Scalability?
 
-![](Baker2016_1.png)
 
-# 
-
-![](Baker2016_2.png)
 
 # 
 
-![](Baker2016_3.png)
+![](Baker2016_1.png)\ 
 
 # 
 
-![](pilosof1.png)
+![](Baker2016_2.png)\ 
+
+# 
+
+![](Baker2016_3.png)\ 
+
+# 
+
+![](pilosof1.png)\ 
 
 <!-- I'm an ecologist -->
 
 
 # Motivation: Code in Ecology
 
-![](white2016front.png){width=70%}
+![](white2016front.png){width=70%}\ 
 
 # Motivation: Ecology Journal Policies
 
-![](white2016.png){width=50%}
+![](white2016.png){width=50%}\ 
 
 *Meeslan, Heer and White 2016 Trends in Eco Evo*
 
 # Motivation: Social Science Journal Policies
 
-![](crosas2018.png){width=70%}
+![](crosas2018.png){width=70%}\ 
 
 *Crosas et al. 2018 SocArXiv*
 
 # Motivation: Journal Policy Impacts
 
-![](Stodden2018front.png){width=70%}
+![](Stodden2018front.png){width=70%}\ 
 
 
 # Motivation: Journal Policy Impacts
 
-![](stodden2018a.png){width=70%}
+![](stodden2018a.png){width=70%}\ 
 
 # Motivation: Journal Policy Impacts
 
-![](stodden2018b.png){width=70%}
+![](stodden2018b.png){width=70%}\ 
 
 *Stodden et al. 2018 PNAS*
 
@@ -99,19 +111,19 @@ $$ Synthesis = f(benefaction) $$
 
 # Opportunity: Benefaction not just reproducibility
 
-![](colberg_repeat.png){width=70%}
+![](colberg_repeat.png){width=70%}\ 
 
 *Colberg et al. 2015 Comm ACM*
 
 # Opportunity: Benefaction not just reproducibility
 
-![](colberg_repro.png){width=70%}
+![](colberg_repro.png){width=70%}\ 
 
 *Colberg et al. 2015 Comm ACM*
 
 # Opportunity: Benefaction not just reproducibility
 
-![](colberg_benefact.png){width=70%}
+![](colberg_benefact.png){width=70%}\ 
 
 *Colberg et al. 2015 Comm ACM*
 
@@ -126,11 +138,16 @@ $$ Synthesis = f(benefaction) $$
 
 # Reality: Common Ground
 
-![](nsd.png){width=70%}
+![](nsd.png){width=70%}\
+
+<!-- ```{r echo = FALSE, out.width = "70%", dpi = 10} -->
+<!-- knitr::include_graphics("./nsd.png") -->
+<!-- ``` -->
+
 
 # Reality: Common Ground
 
-![](cern_hf.png){width=70%}
+![](cern_hf.png){width=70%}\ 
 
 <!-- Similar challenges in Ecosystem Ecology and Particle Physics -->
 
@@ -186,16 +203,17 @@ Basic Usage (current paradigm):
 
 # What is data provenance?
 
-![](provw3c.png){width=80%}
+![](provw3c.png){width=80%}\ 
 
 
-# encapsulator(A Kit of Parts): Capsule creation
+<!-- # encapsulator(A Kit of Parts): Capsule creation -->
 
-- Virtual Machine (encapsulator)
-- Docker (containR)
-- Literate computing notebook (Jupyter)
-- Compressed (Reprozip)
-- Capsule database (Code Ocean)
+<!-- - Data provenance capture -->
+<!-- - Virtual Machine (encapsulator) -->
+<!-- - Docker (containR) -->
+<!-- - Literate computing notebook (Jupyter) -->
+<!-- - Compressed (Reprozip) -->
+<!-- - Capsule database (Code Ocean) -->
 
 
 # Conclusion: The next great challenge is synthesis
@@ -206,14 +224,14 @@ Basic Usage (current paradigm):
 
 # Conclusion: The next great challenge is synthesis
 
-![](dataverse_world.png){width=20%}
+![](dataverse_world.png){width=20%}\ 
 
 
 # Questions and Discussion:
 
 *Possible discussion topics:*
 
-![](dataverse_r_project.png){width=20%}
+![](dataverse_r_project.png){width=20%}\ 
 
 1. What checks are in place to verify and link dataverses?
 2. Can provenance production become a part of the checking system?
@@ -233,10 +251,10 @@ Basic Usage (current paradigm):
 *Much of this work was supported by NSF SSI-1450277 (End-to-End Provenance) and ACI-1448123 (Citation++).*
 *More details are available at https://projects.iq.harvard.edu/provenance-at-harvard*
 
-![](inst_2.png){width=19%}
-![](inst_3.png){width=20%}
-![](inst_1.png){width=25%}
-![](inst_4.png){width=15%}
+![](inst_2.png){width=19%}\ 
+![](inst_3.png){width=20%}\ 
+![](inst_1.png){width=25%}\ 
+![](inst_4.png){width=15%}\ 
 
 
 # Tools: Overview
