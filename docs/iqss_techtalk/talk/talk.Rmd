@@ -99,7 +99,7 @@ John F. Kennedy
 
 # Benefaction: Capsules & Continuous Integration
 
-\[](travis.png)\ 
+\![](travis.png)\ 
 
 # Scientific culture is shifiting
 
@@ -164,7 +164,7 @@ John F. Kennedy
 
 # Reality = The Engineering Gap
 
-![](blazing_saddles2.JPG)
+![](blazing_saddles2.JPG){width=70%}\ 
 
 <!-- However, after almost ten years of being an open-source advocate... -->
 <!-- Ecologists aren't CS majors, they're tree climbing, scub-diving types -->
@@ -240,29 +240,21 @@ Goal: Simplify computational reproducibility
 2. Cleaned = organize files, remove non-essential code and re-format
 
 
-# encapsulator
-
-Basic Usage (current paradigm):
-
-1. Code as usual in your normal environment while recording provenance
-2. Run encapsulator from the console
-3. List desired results
-4. Product = Capsule containing essential code and data with a virtual machine
 
 # encapsulator
 
-![](cise2.png)\ 
+![](cise2.png){width=80%}\ 
 
 # What is data provenance?
 
-![](provw3c.png){width=80%}
+![](provw3c.png){width=80%}\ 
 
 
 # encapsulator
 
 Example: Messycode.R
 
-![](encap_messy.png){width=70%}
+![](encap_messy.png){width=70%}\ 
 
 # encapsulator
 
@@ -287,6 +279,16 @@ Example: Messycode.R
 Example: Messycode.R
 
 ![](encap_clean.png){width=70%}
+
+
+# encapsulator
+
+Basic Usage (current paradigm):
+
+1. Code as usual in your normal environment while recording provenance
+2. Run encapsulator from the console
+3. List desired results
+4. Product = Capsule containing essential code and data with a virtual machine
 
 
 # Conclusion
