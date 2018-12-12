@@ -9,7 +9,8 @@ output:
     fonttheme: "structurebold"
 header-includes:
   - \titlegraphic{\includegraphics[width=0.4\paperwidth]{./hf_header.png}}
-
+  - \setbeameroption{hide notes}
+  
 ---
 
 <!-- output: powerpoint_presentation -->
@@ -17,114 +18,56 @@ header-includes:
 <!-- knitr::opts_chunk$set(echo = FALSE) -->
 <!-- ``` -->
 
-# Overview
--  Crisis: rampant irreproducibility
--  Opportunity: better science
+# 
+
+<!-- # The Reproducibility Crisis -->
+
+\note{
+- Crisis: rampant irreproducibility
+- Opportunity: better science
 - Continuous Integration and Capsules
 - Provenance and bridging the Software Engineering Gap
-
-# The Reproducibility Crisis
-
-# The Scientific Process
-
-# Opportunity = Benefaction
-
-# Reality = The Engineering Gap
-
-# Encapsulation and Continuous Integration
-
-# encapsulator = Easier Capsules and CI
-
-# Conclusion
-
-- Capsules = sharing (data, code, metadata)
-- Continuous Integration = development * sharing * discovery
-
-# Thanks!
-
-
-
-# Open is not enough
-- Trisovic et al 2018
-
-
-# Reproducibility: Computation
-- Project architecture (README, src, doc, data, bin, results)
-- Notebooks (Rmarkdown, Jupyter)
-- Version control (git, subversion)
-- Capsule Databases/Engines (CodeOcean, Globus)
-- Continuous Integration (at the beginning)
-- Scalability?
-
-
-
-# 
+}
 
 ![](Baker2016_1.png)\ 
 
 # 
 
-![](Baker2016_2.png)\ 
+![](panic.jpg)\ 
 
 # 
+
+![](Baker2016_2.png)\ 
+
+
+# 
+
+![](jfk.jpg)\ 
+
+# 
+
+The Chinese use two brush strokes to write the word "crisis." One
+brush stroke stands for danger; the other for opportunity. In a
+crisis, be aware of the danger -- but recognize the opportunity.
+
+John F. Kennedy
+
+*Speech in Indianapolis* (April 12, 1959)
+
+
+# 
+
+\note{A significant portion is computational methodological}
 
 ![](Baker2016_3.png)\ 
 
-# 
-
-![](pilosof1.png)\ 
-
-<!-- I'm an ecologist -->
 
 
-# Motivation: Code in Ecology
 
-![](white2016front.png){width=70%}\ 
-
-# Motivation: Ecology Journal Policies
-
-![](white2016.png){width=50%}\ 
-
-*Meeslan, Heer and White 2016 Trends in Eco Evo*
-
-# Motivation: Social Science Journal Policies
-
-![](crosas2018.png){width=70%}\ 
-
-*Crosas et al. 2018 SocArXiv*
-
-# Motivation: Journal Policy Impacts
-
-![](Stodden2018front.png){width=70%}\ 
-
-
-# Motivation: Journal Policy Impacts
-
-![](stodden2018a.png){width=70%}\ 
-
-# Motivation: Journal Policy Impacts
-
-![](stodden2018b.png){width=70%}\ 
-
-*Stodden et al. 2018 PNAS*
-
-# Goal: Repeatability/Reproducibility
-
-metadata + data + code + results + contact
-
-# Goal: Repeatability/Reproducibility
-
-BestPractices(metadata + data + code + results + contact)
-
-# Goal: Repeatability/Reproducibility
-
-BestPractices(metadata * data * code * results * contact)
 
 # Opportunity: Benefaction not just reproducibility
 
-$$ Synthesis = f(benefaction) $$
-
-# Opportunity: Benefaction not just reproducibility
+\note{Defining benefaction and opportunity}
 
 ![](colberg_repeat.png){width=70%}\ 
 
@@ -142,16 +85,97 @@ $$ Synthesis = f(benefaction) $$
 
 *Colberg et al. 2015 Comm ACM*
 
+# Benefaction: Computational Best Practices
 
-# Tools: Research Pipeline
+- Open data (FAIR, Dataverse, Data Dryad)
+- Open software (R, python, Julia)
+- Project architecture (README, src, doc, data, bin, results)
+- Notebooks (Rmarkdown, Jupyter)
+- Version control (git, subversion)
 
-| Thought      | Data Collection            | Data Processing               | Analysis                          | Reporting                  | 
-| :---------   | :------------------------- | :---------------------------- | :-------------------------------- | :------------------------- | 
-| *Meta-Data*  | *Meta-Data* + *Provenance* | *Provenance* + *Versioning*   | *Versioning* + *Provenance*       | *Lit Prog* + *Versioning*  | 
+# Benefaction: Capsules & Continuous Integration
+
+![](codeocean.png)\ 
+
+# Benefaction: Capsules & Continuous Integration
+
+\[](travis.png)\ 
+
+# Scientific culture is shifiting
+
+![](white2016front.png){width=90%}\ 
+
+
+# Scientific culture is shifiting
+
+![](white2016.png){width=50%}\ 
+
+*Meeslan, Heer and White 2016 Trends in Eco Evo*
+
+# Scientific culture is shifiting
+
+![](crosas2018.png){width=80%}\ 
+
+*Crosas et al. 2018 SocArXiv*
+
+# Journal Policy Impacts
+
+![](Stodden2018front.png){width=80%}\ 
+
+<!-- # Journal Policy Impacts -->
+<!-- ![](stodden2018a.png){width=70%}\  -->
+<!-- *Stodden et al. 2018 PNAS* -->
+<!-- # Journal Policy Impacts -->
+<!-- ![](stodden2018b.png){width=50%}\  -->
+<!-- *Stodden et al. 2018 PNAS* -->
+
+# 
+
+\note{
+- Top-down approach likely not successful
+- Tools need to be easier to facilitate better computer sci
+}
+
+![](panic_button.jpg)\ 
+
+
+# 
+
+<!-- I'm an ecologist -->
+
+![](forest.png)\ 
+
+# 
+
+![](pilosof1.png)\ 
 
 
 
-# Reality: Common Ground
+# Reality = An Engineering Gap
+
+![](ieee_rank.png)\ 
+
+\note{
+- Broad programming is relatively recent
+- R has enabled rapid growth 
+- R is for Rube-Goldberg-Machines
+- The Wild Wild West
+}
+
+# Reality = The Engineering Gap
+
+![](blazing_saddles2.JPG)
+
+<!-- However, after almost ten years of being an open-source advocate... -->
+<!-- Ecologists aren't CS majors, they're tree climbing, scub-diving types -->
+
+
+# Reality = The Engineering Gap
+
+![](rgm.jpg)
+
+
+# Reality = The Engineering Gap
 
 ![](nsd.png){width=70%}\
 
@@ -160,53 +184,63 @@ $$ Synthesis = f(benefaction) $$
 <!-- ``` -->
 
 
-# Reality: Common Ground
+# Reality = The Engineering Gap
 
 ![](cern_hf.png){width=70%}\ 
 
 <!-- Similar challenges in Ecosystem Ecology and Particle Physics -->
 
-# Reality: Common Ground
+# 
 
-- *Most scientists don't want to produce software, they want to do
-science.* 
-
-
-# Reality: Common Ground
-
-- *Most scientists don't want to produce software, they want to do
-science.* 
-
-- *Let's automate as much of the process as we can to lower activation
-energy, decrease error rates and increase sharing.*
+*Most scientists don't want to produce software, they want to do their
+ science.*
 
 
-# Tools: Encapsulator 
+
+
+
+
+
+# encapsulator
 
 ![IEEE: Computing in Science & Engineering 2018](CISE2018.png)
 
 
-# Tools: Encapsulator 
+# encapsulator
+
+\note{
+- similar to reprozip
+- could work with any language that has provenance
+- features code cleaning using Rclean
+}
+
+![](reprozip.png)\ 
+
+
+# encapsulator
 
 Goal: Simplify computational reproducibility
 
 1. Create a data "capsule" with code, data and environment
 
-# Tools: Encapsulator 
+
+# encapsulator
 
 Goal: Simplify computational reproducibility
 
 1. Create a data "capsule" with code, data and environment
 2. Increase transparency with "cleaned" code and workspace
 
-# Tools: Encapsulator 
+
+# encapsulator
 
 Goal: Simplify computational reproducibility
 
 1. Capsule = all necessary software and data
 2. Cleaned = organize files, remove non-essential code and re-format
 
-# Tools: Encapsulator 
+
+# encapsulator
 
 Basic Usage (current paradigm):
 
@@ -215,45 +249,53 @@ Basic Usage (current paradigm):
 3. List desired results
 4. Product = Capsule containing essential code and data with a virtual machine
 
+# encapsulator
+
+![](cise2.png)\ 
 
 # What is data provenance?
 
-![](provw3c.png){width=80%}\ 
+![](provw3c.png){width=80%}
 
 
-<!-- # encapsulator(A Kit of Parts): Capsule creation -->
+# encapsulator
 
-<!-- - Data provenance capture -->
-<!-- - Virtual Machine (encapsulator) -->
-<!-- - Docker (containR) -->
-<!-- - Literate computing notebook (Jupyter) -->
-<!-- - Compressed (Reprozip) -->
-<!-- - Capsule database (Code Ocean) -->
+Example: Messycode.R
+
+![](encap_messy.png){width=70%}
+
+# encapsulator
+
+Example: Messycode.R
+
+- near stream-of-consciousness coding that follows a train of thought in script development,
+- output to console that is not written to disk,
+- intermediate objects that are abandoned,
+- library and new data calls throughout the script,
+- output written to disk but not used in final documents,
+- code that is not modularized,
+- code that is syntactically correct but not particularly comprehensible.
+
+# encapsulator
+
+Example: Messycode.R
+
+![](encap_messy.png){width=70%}
+
+# encapsulator
+
+Example: Messycode.R
+
+![](encap_clean.png){width=70%}
 
 
-# Conclusion: The next great challenge is synthesis
+# Conclusion
 
-<!-- Benefaction not irreproducibility! -->
+- Capsules = sharing (data, code, metadata)
+- Continuous Integration = development * sharing * discovery
+- Support the transition to using CI and capsules
 
-** Software should not limit science **
-
-# Conclusion: The next great challenge is synthesis
-
-![](dataverse_world.png){width=20%}\ 
-
-
-# Questions and Discussion:
-
-*Possible discussion topics:*
-
-![](dataverse_r_project.png){width=20%}\ 
-
-1. What checks are in place to verify and link dataverses?
-2. Can provenance production become a part of the checking system?
-3. What are the pros and cons of automated checking/verification
-   and/or cleaning/encapsulation of dataverses?
-4. I'm focused on R's wild-wild-west, but how does this translate to
-   other languages?
+# Thanks you
 
 *Contact Info:*
 
@@ -272,20 +314,20 @@ Basic Usage (current paradigm):
 ![](inst_4.png){width=15%}\ 
 
 
-# Tools: Overview
+<!-- # Tools: Overview -->
 
-|                 | Dataverse  | Code Ocean  |  Zenodo   | Figshare  | Dryad    | PANGAEA | GitHub & Bitbucket | Supplementary Material |
-| :-------------- | :----:     | :----:      | :----:    | :-------: | :---:    | :-----: | :----------------: | :--------------------: |
-| Meta Data       | Yes        | Yes         |  Yes      | Yes       | Yes      | Yes     | Yes                | Yes                    |
-| Data Hosting    | Yes        | Yes         |  Yes      | Yes       | Yes      | Yes     | Yes                | Yes                    |
-| Code Hosting    | Yes        | Yes         |  Yes      | No        | No       | No      | Yes                | Yes                    |
-| Versioning      | No?        | No?         |  Yes      | No        | No       | No      | Yes                | No                     |
-| Capsules        | No         | Yes         |  No       | No        | No       | No      | No                 | No                     |
-| Assigns DOI     | Yes        | Yes         |  Yes      | Yes       | Yes      | Yes     | No                 | No                     |
-| License         | Flexible   | Flexible    | Flexible  | MIT       | CC0      | CC-BY   | Flexible           | None                   |
-| Cost            | None       | Possible    |  None     | None      | Possible | None    | None               | None                   |
+<!-- |                 | Dataverse  | Code Ocean  |  Zenodo   | Figshare  | Dryad    | PANGAEA | GitHub & Bitbucket | Supplementary Material | -->
+<!-- | :-------------- | :----:     | :----:      | :----:    | :-------: | :---:    | :-----: | :----------------: | :--------------------: | -->
+<!-- | Meta Data       | Yes        | Yes         |  Yes      | Yes       | Yes      | Yes     | Yes                | Yes                    | -->
+<!-- | Data Hosting    | Yes        | Yes         |  Yes      | Yes       | Yes      | Yes     | Yes                | Yes                    | -->
+<!-- | Code Hosting    | Yes        | Yes         |  Yes      | No        | No       | No      | Yes                | Yes                    | -->
+<!-- | Versioning      | No?        | No?         |  Yes      | No        | No       | No      | Yes                | No                     | -->
+<!-- | Capsules        | No         | Yes         |  No       | No        | No       | No      | No                 | No                     | -->
+<!-- | Assigns DOI     | Yes        | Yes         |  Yes      | Yes       | Yes      | Yes     | No                 | No                     | -->
+<!-- | License         | Flexible   | Flexible    | Flexible  | MIT       | CC0      | CC-BY   | Flexible           | None                   | -->
+<!-- | Cost            | None       | Possible    |  None     | None      | Possible | None    | None               | None                   | -->
 
-*Adapted from Mislan, Heer & White 2016 Trends in Ecol Evol*
+<!-- *Adapted from Mislan, Heer & White 2016 Trends in Ecol Evol* -->
 
 
 
